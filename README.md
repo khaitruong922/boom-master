@@ -1,4 +1,4 @@
-# Your Game Name
+# Bomb Master
 
 This project is created from [template](https://github.com/khaitruong922/unity-2d-desktop-template/).
 
@@ -12,9 +12,9 @@ Desktop
 
 ## Contributors
 
-- Contributor 1
+- Khai Truong - [khaitruong922](https://github.com/khaitruong922)
 
-- Contributor 2
+- Thong Thanh Vo - [vothanhthong](https://github.com/vothanhthong)
 
 ## Preview
 

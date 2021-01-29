@@ -5,12 +5,13 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     [SerializeField] private float lifetime = 2f;
-    private IEnumerator Start()
+    private void Update()
     {
-        yield return new WaitForSeconds(lifetime);
+        lifetime -= Time.deltaTime;
+        if (lifetime > 0) return;
         Explode();
     }
-    private void Explode()
+    public void Explode()
     {
         Destroy(gameObject);
         // spawn explosions

@@ -1,4 +1,4 @@
-# Bomb Master
+# Boom Master
 
 This project is created from [template](https://github.com/khaitruong922/unity-2d-desktop-template/).
 

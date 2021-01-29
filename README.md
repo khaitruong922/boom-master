@@ -28,4 +28,4 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 
 ## Acknowledgement
 
-*link to resources here*
+- Explosion effect from [Lunar Battle Pack](https://mattwalkden.itch.io/lunar-battle-pack)

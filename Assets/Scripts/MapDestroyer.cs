@@ -3,16 +3,65 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class MapDestroyer : MonoBehaviour
+[RequireComponent(typeof(Grid))]
+public class MapDestroyer : MonoBehaviourSingleton<MapDestroyer>
 {
-    [SerializeField] private Tilemap tilemap;
-    public void Explode(Vector2 worldPos)
+    private Grid grid;
+    [SerializeField] private ExplosionPool explosionPool;
+    [SerializeField] private Tilemap groundTilemap;
+    [SerializeField] private Tilemap wallTilemap;
+    [SerializeField] private Tilemap colliderDecoratorTilemap;
+    [SerializeField] private Tilemap destructibleTilemap;
+    protected override void Awake()
     {
-        Vector3Int cell = tilemap.WorldToCell(worldPos);
+        base.Awake();
+        grid = GetComponent<Grid>();
     }
-    private void ExplodeCell(Vector3Int cell)
+    public void Explode(Vector2 worldPos, int length = 0)
     {
-        Tile tile = tilemap.GetTile<Tile>(cell);
+        Vector3Int cell = grid.WorldToCell(worldPos);
+        ExplodeCell(cell);
+        for (int i = 1; i <= length; i++)
+        {
+            if (!ExplodeCell(cell + new Vector3Int(i, 0, 0))) break;
+        }
+        for (int i = 1; i <= length; i++)
+        {
+            if (!ExplodeCell(cell + new Vector3Int(-i, 0, 0))) break;
+        }
+        for (int i = 1; i <= length; i++)
+        {
+            if (!ExplodeCell(cell + new Vector3Int(0, i, 0))) break;
+        }
+        for (int i = 1; i <= length; i++)
+        {
+            if (!ExplodeCell(cell + new Vector3Int(0, -i, 0))) break;
+        }
     }
-    
+    private bool ExplodeCell(Vector3Int cell)
+    {
+        Tile wallTile = wallTilemap.GetTile<Tile>(cell);
+        if (wallTile != null)
+        {
+            return false;
+        }
+        Tile colliderDecoratorTile = colliderDecoratorTilemap.GetTile<Tile>(cell);
+        if (colliderDecoratorTile != null)
+        {
+            return false;
+        }
+        Tile destructibleTile = destructibleTilemap.GetTile<Tile>(cell);
+        if (destructibleTile != null)
+        {
+            destructibleTilemap.SetTile(cell, null);
+            return false;
+        }
+        Tile groundTile = groundTilemap.GetTile<Tile>(cell);
+        Vector3 cellCenterPos = groundTilemap.GetCellCenterWorld(cell);
+        Explosion explosion = explosionPool.Get();
+        explosion.transform.position = cellCenterPos;
+        explosion.gameObject.SetActive(true);
+        return true;
+    }
+
 }

@@ -29,3 +29,7 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 ## Acknowledgement
 
 - Explosion effect from [Lunar Battle Pack](https://mattwalkden.itch.io/lunar-battle-pack)
+
+- [RPG Nature Tileset - Seasons](https://stealthix.itch.io/rpg-nature-tileset)
+
+- [Field of Green](https://guttykreum.itch.io/field-of-green)

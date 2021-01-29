@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class BombPlacer : MonoBehaviour
 {
-    public static Vector3 WorldToBombPosition(Vector3 origin)
-    {
-        return origin.FloorToInt() + new Vector3(0.5f, 0.5f, 0);
-    }
     private List<Vector3> bombPositions = new List<Vector3>();
     [SerializeField] private GameObject bombPrefab;
 
@@ -26,5 +22,9 @@ public class BombPlacer : MonoBehaviour
     private void RemoveBombPosition(Vector3 pos)
     {
         bombPositions.Remove(pos);
+    }
+    public static Vector3 WorldToBombPosition(Vector3 origin)
+    {
+        return origin.FloorToInt() + new Vector3(0.5f, 0.5f, 0);
     }
 }

@@ -21,7 +21,7 @@ public class MoveOnInput : MonoBehaviour
         if (keyCode == downKey) return new Vector2(0, -1);
         return Vector2.zero;
     }
-    private void ComputekLatestKey()
+    private void ComputeLatestKey()
     {
         if (Input.GetKeyDown(leftKey)) latestKey = leftKey;
         if (Input.GetKeyDown(rightKey)) latestKey = rightKey;
@@ -30,9 +30,10 @@ public class MoveOnInput : MonoBehaviour
     }
     private void Update()
     {
-        ComputekLatestKey();
+        ComputeLatestKey();
         Vector2 direction = Vector2.zero;
         int keyCount = 0;
+        
         if (Input.GetKey(leftKey))
         {
             keyCount++;
@@ -55,12 +56,7 @@ public class MoveOnInput : MonoBehaviour
             direction += KeyToVector2(downKey);
         }
 
-        if (keyCount == 0)
-        {
-            moveComponent.Move(Vector2.zero);
-            return;
-        }
-        if (keyCount == 1)
+        if (keyCount <= 1)
         {
             moveComponent.Move(direction);
             return;

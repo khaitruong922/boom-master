@@ -10,11 +10,19 @@ public class Bomb : MonoBehaviour
     [SerializeField] private int length = 2;
     public Action<Vector3> OnExploded { get; set; }
     private bool hasExploded = false;
+    private Collider2D bombCollider;
+    private void Awake() {
+        bombCollider = GetComponent<Collider2D>();
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         Explosion explosion = other.GetComponent<Explosion>();
         if (explosion != null) Explode();
     }
+    // private void OnTriggerExit2D(Collider2D other) {
+    //     BombPlacer bombPlacer = other.GetComponent<BombPlacer>();
+    //     if (bombPlacer != null)bombCollider.isTrigger = false;
+    // }
     private void Update()
     {
         lifetime -= Time.deltaTime;

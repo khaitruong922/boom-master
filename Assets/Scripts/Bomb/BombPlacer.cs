@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class BombPlacer : MonoBehaviour
 {
-    private Grid grid;
+    private static List<Vector3> bombPositions = new List<Vector3>();
     [SerializeField] private KeyCode placeBombKey = KeyCode.Space;
     [SerializeField] private GameObject bombPrefab;
-    private void Awake()
-    {
-        grid = FindObjectOfType<Grid>();
-    }
     private void Update()
     {
         if (Input.GetKeyDown(placeBombKey))
@@ -20,8 +16,14 @@ public class BombPlacer : MonoBehaviour
     }
     private void PlaceBomb()
     {
-        Vector3Int cellPos = grid.WorldToCell(transform.position);
-        Vector3 cellCenterPos = grid.GetCellCenterWorld(cellPos);
-        Instantiate(bombPrefab, cellCenterPos, Quaternion.identity);
+        Vector3 cellCenterPos = transform.position.FloorToInt() + new Vector3(0.5f, 0.5f, 0);
+        if (bombPositions.Contains(cellCenterPos)) return;
+        bombPositions.Add(cellCenterPos);
+        Bomb b = Instantiate(bombPrefab, cellCenterPos, Quaternion.identity).GetComponent<Bomb>();
+        b.OnExploded += RemoveBombPosition;
+    }
+    private static void RemoveBombPosition(Vector3 pos)
+    {
+        bombPositions.Remove(pos);
     }
 }

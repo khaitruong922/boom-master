@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class BombPlacer : MonoBehaviour
 {
-    private static List<Vector3> bombPositions = new List<Vector3>();
-    [SerializeField] private KeyCode placeBombKey = KeyCode.Space;
-    [SerializeField] private GameObject bombPrefab;
-    private void Update()
+    public static Vector3 WorldToBombPosition(Vector3 origin)
     {
-        if (Input.GetKeyDown(placeBombKey))
-        {
-            PlaceBomb();
-        }
+        return origin.FloorToInt() + new Vector3(0.5f, 0.5f, 0);
     }
-    private void PlaceBomb()
+    private List<Vector3> bombPositions = new List<Vector3>();
+    [SerializeField] private GameObject bombPrefab;
+
+    public void PlaceBomb(Vector3 position)
     {
-        Vector3 cellCenterPos = transform.position.FloorToInt() + new Vector3(0.5f, 0.5f, 0);
+        Vector3 cellCenterPos = WorldToBombPosition(position);
         if (bombPositions.Contains(cellCenterPos)) return;
         bombPositions.Add(cellCenterPos);
         Bomb b = Instantiate(bombPrefab, cellCenterPos, Quaternion.identity).GetComponent<Bomb>();
         b.OnExploded += RemoveBombPosition;
     }
-    private static void RemoveBombPosition(Vector3 pos)
+    public void PlaceBomb()
+    {
+        PlaceBomb(transform.position);
+    }
+    private void RemoveBombPosition(Vector3 pos)
     {
         bombPositions.Remove(pos);
     }

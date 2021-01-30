@@ -409,50 +409,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e75ca281a24e40e42b318be851d0992d, type: 3}
---- !u!1 &4764574901707312386 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4764574903035461243, guid: e75ca281a24e40e42b318be851d0992d, type: 3}
-  m_PrefabInstance: {fileID: 4764574901707312385}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4764574901707312387 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1932194683, guid: e75ca281a24e40e42b318be851d0992d, type: 3}
-  m_PrefabInstance: {fileID: 4764574901707312385}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4764574901707312386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa1f3bb35976fb54e936b8a76cac6eda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4764574901707312388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4764574901707312386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73de4434f297cae4ba61697078f0f5fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeKey: 27
-  onKeyDown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4764574901707312387}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: HandlePause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &6571031582413332347
 PrefabInstance:
   m_ObjectHideFlags: 0

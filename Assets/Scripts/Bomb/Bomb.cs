@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
+
 public class Bomb : MonoBehaviour
 {
     [SerializeField] private LayerMask wallLayerMask;
     [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private float lifetime = 2f;
     [SerializeField] private int length = 2;
-    public Action<Vector3> OnExploded { get; set; }
+    [SerializeField] private UnityEvent onExploded;
+    public BombPlacer BombPlacer { get; set; }
     private bool hasExploded = false;
     private Collider2D bombCollider;
-    private void Awake() {
+    private void Awake()
+    {
         bombCollider = GetComponent<Collider2D>();
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -19,10 +23,6 @@ public class Bomb : MonoBehaviour
         Explosion explosion = other.GetComponent<Explosion>();
         if (explosion != null) Explode();
     }
-    // private void OnTriggerExit2D(Collider2D other) {
-    //     BombPlacer bombPlacer = other.GetComponent<BombPlacer>();
-    //     if (bombPlacer != null)bombCollider.isTrigger = false;
-    // }
     private void Update()
     {
         lifetime -= Time.deltaTime;
@@ -38,7 +38,8 @@ public class Bomb : MonoBehaviour
         CreateExplosions(Vector2.down);
         CreateExplosions(Vector2.left);
         CreateExplosions(Vector2.right);
-        OnExploded?.Invoke(transform.position);
+        onExploded?.Invoke();
+        BombPlacer.RemoveBombPosition(transform.position);
         Destroy(gameObject);
     }
     private void CreateExplosions(Vector3 direction)
@@ -56,9 +57,4 @@ public class Bomb : MonoBehaviour
             Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
         }
     }
-    private void OnDestroy()
-    {
-        OnExploded = null;
-    }
-
 }

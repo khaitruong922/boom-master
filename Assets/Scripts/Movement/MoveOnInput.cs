@@ -6,7 +6,7 @@ using UnityEngine;
 public class MoveOnInput : MonoBehaviour
 {
     [SerializeField]
-    private KeyCode leftKey = KeyCode.A, rightKey = KeyCode.D, upKey = KeyCode.W, downKey = KeyCode.S;
+    private KeyCode upKey = KeyCode.W , leftKey = KeyCode.A, downKey = KeyCode.S,  rightKey = KeyCode.D ;
     private KeyCode latestKey = KeyCode.None;
     private MoveComponent moveComponent;
     private void Awake()
@@ -33,7 +33,7 @@ public class MoveOnInput : MonoBehaviour
         ComputeLatestKey();
         Vector2 direction = Vector2.zero;
         int keyCount = 0;
-        
+
         if (Input.GetKey(leftKey))
         {
             keyCount++;

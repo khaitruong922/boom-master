@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Vector3Extensions;
 
 public class BombPlacer : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class BombPlacer : MonoBehaviour
 
     public void PlaceBomb(Vector3 position)
     {
-        Vector3 cellCenterPos = WorldToBombPosition(position);
+        Vector3 cellCenterPos = position.ToCellCenter();
         if (bombPositions.Contains(cellCenterPos)) return;
         bombPositions.Add(cellCenterPos);
         Bomb b = Instantiate(bombPrefab, cellCenterPos, Quaternion.identity).GetComponent<Bomb>();
@@ -22,9 +23,5 @@ public class BombPlacer : MonoBehaviour
     private void RemoveBombPosition(Vector3 pos)
     {
         bombPositions.Remove(pos);
-    }
-    public static Vector3 WorldToBombPosition(Vector3 origin)
-    {
-        return origin.FloorToInt() + new Vector3(0.5f, 0.5f, 0);
     }
 }

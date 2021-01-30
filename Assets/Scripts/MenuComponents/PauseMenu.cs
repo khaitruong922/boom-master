@@ -4,35 +4,31 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     private bool isPausing = false;
-    [SerializeField]
-    private KeyCode pauseKey = KeyCode.Escape;
+
     [SerializeField]
     private GameObject pauseLayer;
     private void Start()
     {
         Resume();
     }
-    private void Update()
+    public void HandlePause()
     {
-        if (Input.GetKeyDown(pauseKey))
+        if (isPausing)
         {
-            if (isPausing)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+            Resume();
+        }
+        else
+        {
+            Pause();
         }
     }
-    public void Pause()
+    private void Pause()
     {
         isPausing = true;
         pauseLayer.SetActive(true);
         Time.timeScale = 0f;
     }
-    public void Resume()
+    private void Resume()
     {
         isPausing = false;
         pauseLayer.SetActive(false);

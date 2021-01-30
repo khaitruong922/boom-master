@@ -2,13 +2,15 @@
 
 using UnityEngine;
 using System;
+using UnityEngine.Events;
+
 [RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float damage = 1;
     [SerializeField] private float lifetime = 1f;
     [SerializeField] private bool canPassThroughObject = false;
-    public Action<Collider2D> OnHit { get; set; }
+    [SerializeField] private UnityEvent onHit;
     private Rigidbody2D rb;
     private CharacterType ownerType;
     private void Awake()
@@ -35,12 +37,13 @@ public class Projectile : MonoBehaviour
             if (hitCharacter.CharacterType != ownerType)
             {
                 health.TakeDamage(damage);
+                onHit?.Invoke();
                 toBeDestroyed = true;
             }
         }
         if (other.GetComponent<IDestroyProjectile>() != null)
         {
-            OnHit?.Invoke(other);
+            onHit?.Invoke();
             toBeDestroyed = true;
         }
         if (toBeDestroyed)

@@ -10,9 +10,9 @@ public class ParticleSpawner : MonoBehaviour
     private float lifetime = 1f;
     [SerializeField]
     private Color color = Color.white;
-    public void Spawn(Collider2D other)
+    public void Spawn(Vector3 position)
     {
-        ParticleSystem particleSystem = Instantiate(particlePrefab, transform.position, Quaternion.identity).GetComponent<ParticleSystem>();
+        ParticleSystem particleSystem = Instantiate(particlePrefab, position, Quaternion.identity).GetComponent<ParticleSystem>();
         if (particleSystem != null)
         {
             ParticleSystem.MainModule settings = particleSystem.main;
@@ -20,5 +20,9 @@ public class ParticleSpawner : MonoBehaviour
             Destroy(particleSystem.gameObject, lifetime);
         }
 
+    }
+    public void Spawn()
+    {
+        Spawn(transform.position);
     }
 }

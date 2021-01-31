@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class ShootComponent : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject projectile;
-    [SerializeField]
-    private float shootForce = 30;
-    [SerializeField]
-    private float damage = 15;
+    [SerializeField] private GameObject projectile;
+    [SerializeField] private float shootForce = 15;
+    [SerializeField] private float damage = 15;
     private CharacterType characterType;
     private void Awake()
     {

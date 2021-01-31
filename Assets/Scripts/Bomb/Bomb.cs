@@ -50,15 +50,24 @@ public class Bomb : MonoBehaviour
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, i, wallLayerMask);
             Collider2D collider = hit.collider;
-            Vector3 explosionPos = transform.position + (i * direction);
+            Vector3 position = transform.position + (i * direction);
             if (collider)
             {
-                collider.GetComponent<DestructibleTilemap>()?.DestroyTile(explosionPos);
+                DestructibleTilemap destructibleTilemap = collider.GetComponent<DestructibleTilemap>();
+                if (destructibleTilemap != null)
+                {
+                    destructibleTilemap.DestroyTile(position);
+                    SpawnExplosion(position);
+                }
                 break;
             }
-            Explosion explosion = Instantiate(explosionPrefab, explosionPos, Quaternion.identity).GetComponent<Explosion>();
-            explosion.CharacterType = CharacterType;
-            explosion.Damage = Damage;
+            SpawnExplosion(position);
         }
+    }
+    private void SpawnExplosion(Vector3 position)
+    {
+        Explosion explosion = Instantiate(explosionPrefab, position, Quaternion.identity).GetComponent<Explosion>();
+        explosion.CharacterType = CharacterType;
+        explosion.Damage = Damage;
     }
 }

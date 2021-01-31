@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2690611085976333645}
   - component: {fileID: 6651745829999516862}
   - component: {fileID: 4718814200791405713}
+  - component: {fileID: 1306887507}
   m_Layer: 0
   m_Name: ShootPoint1
   m_TagString: Untagged
@@ -59,7 +60,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0346d77842981ab42ba2bb20bd7d8ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1306887507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016742035179383512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   cooldown: 1
+  onTimer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4718814200791405713}
+        m_TargetAssemblyTypeName: AIShooter, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1611633743302222995
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,6 +99,7 @@ GameObject:
   - component: {fileID: 8879274657754605587}
   - component: {fileID: 631400558}
   - component: {fileID: 631400559}
+  - component: {fileID: 631400560}
   m_Layer: 0
   m_Name: ShootPoint2
   m_TagString: Untagged
@@ -119,7 +148,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0346d77842981ab42ba2bb20bd7d8ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+--- !u!114 &631400560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611633743302222995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 1
+  onTimer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 631400559}
+        m_TargetAssemblyTypeName: AIShooter, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1789513762122585683
 GameObject:
   m_ObjectHideFlags: 0

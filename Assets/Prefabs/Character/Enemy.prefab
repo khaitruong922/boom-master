@@ -198,6 +198,8 @@ GameObject:
   - component: {fileID: 7246563684370002596}
   - component: {fileID: 1451346398797694481}
   - component: {fileID: -3058190449669351076}
+  - component: {fileID: 7312914008672941890}
+  - component: {fileID: 2576065380152723408}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -467,3 +469,45 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &7312914008672941890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789513762122585683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6901650b28848e09c788ec538b37d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+--- !u!114 &2576065380152723408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789513762122585683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0.25
+  initialCooldown: 0
+  onInterval:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7312914008672941890}
+        m_TargetAssemblyTypeName: AIBomb, Assembly-CSharp
+        m_MethodName: PlaceBomb
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

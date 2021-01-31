@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System;
 
 [RequireComponent(typeof(Tilemap))]
 public class DestructibleTilemap : MonoBehaviour
 {
+    public static Action<Vector2> OnMapChanged { get; set; }
     private Tilemap tilemap;
     private void Awake()
     {
@@ -15,6 +17,7 @@ public class DestructibleTilemap : MonoBehaviour
     {
         Vector3Int pos = tilemap.WorldToCell(position);
         tilemap.SetTile(pos, null);
+        OnMapChanged?.Invoke(position);
     }
 
 }

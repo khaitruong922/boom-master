@@ -17,6 +17,11 @@ public class Explosion : MonoBehaviour
                 health.TakeDamage(Damage);
             }
         }
+        DestructibleTilemap destructibleTilemap = other.GetComponent<DestructibleTilemap>();
+        if (destructibleTilemap != null)
+        {
+            destructibleTilemap.DestroyTile(transform.position);
+        }
     }
 }
 

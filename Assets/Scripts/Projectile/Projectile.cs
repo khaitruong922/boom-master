@@ -8,7 +8,6 @@ using UnityEngine.Events;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float lifetime = 1;
-    [SerializeField] private bool canPassThroughObject = false;
     [SerializeField] private UnityEvent<Collider2D> onTargetHit;
     [SerializeField] private UnityEvent<Vector3> onCollision;
     public float Damage { get; set; }
@@ -24,8 +23,6 @@ public class Projectile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        bool toBeDestroyed = false;
-        bool isCollided = false;
         Health health = other.GetComponent<Health>();
         if (health != null)
         {
@@ -34,27 +31,22 @@ public class Projectile : MonoBehaviour
             {
                 health.TakeDamage(Damage);
                 onTargetHit?.Invoke(other);
-                isCollided = true;
-                toBeDestroyed = true;
+                DestroyProjectile();
             }
         }
         if (other.GetComponent<IDestroyProjectile>() != null)
         {
-            isCollided = true;
-            toBeDestroyed = true;
+            DestroyProjectile();
         }
         DestructibleTilemap destructibleTilemap = other.GetComponent<DestructibleTilemap>();
         if (destructibleTilemap != null)
         {
             destructibleTilemap.DestroyTile(transform.position);
-            isCollided = true;
         }
-        if (isCollided) onCollision?.Invoke(transform.position);
-        if (toBeDestroyed) HandleDestroy();
+        onCollision?.Invoke(transform.position);
     }
-    private void HandleDestroy()
+    private void DestroyProjectile()
     {
-        if (canPassThroughObject) return;
         Destroy(gameObject);
     }
     public void SetVelocity(Vector2 velocity)

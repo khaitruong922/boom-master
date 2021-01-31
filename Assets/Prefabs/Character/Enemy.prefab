@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2690611085976333645}
   - component: {fileID: 6651745829999516862}
   - component: {fileID: 4718814200791405713}
-  - component: {fileID: 1306887507}
+  - component: {fileID: 2281090002810696495}
   m_Layer: 0
   m_Name: ShootPoint1
   m_TagString: Untagged
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0346d77842981ab42ba2bb20bd7d8ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1306887507
+--- !u!114 &2281090002810696495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,7 +73,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 1
-  onTimer:
+  initialCooldown: 0
+  onInterval:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4718814200791405713}
@@ -99,7 +100,7 @@ GameObject:
   - component: {fileID: 8879274657754605587}
   - component: {fileID: 631400558}
   - component: {fileID: 631400559}
-  - component: {fileID: 631400560}
+  - component: {fileID: 1491702061897004834}
   m_Layer: 0
   m_Name: ShootPoint2
   m_TagString: Untagged
@@ -148,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0346d77842981ab42ba2bb20bd7d8ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &631400560
+--- !u!114 &1491702061897004834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,7 +162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 1
-  onTimer:
+  initialCooldown: 0
+  onInterval:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 631400559}

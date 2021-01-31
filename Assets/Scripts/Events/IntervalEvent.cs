@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TimerEvent : MonoBehaviour
+public class IntervalEvent : MonoBehaviour
 {
     [SerializeField] private float cooldown = 1;
-    [SerializeField] private UnityEvent onTimer;
+    [SerializeField] private float initialCooldown = 0;
+    [SerializeField] private UnityEvent onInterval;
     private float cooldownLeft;
+    private void Start()
+    {
+        cooldownLeft = initialCooldown;
+    }
     private void Update()
     {
         if (cooldownLeft > 0)
@@ -16,6 +21,6 @@ public class TimerEvent : MonoBehaviour
             return;
         }
         cooldownLeft += cooldown;
-        onTimer?.Invoke();
+        onInterval?.Invoke();
     }
 }

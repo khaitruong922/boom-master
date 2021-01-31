@@ -2,15 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(ShootComponent))]
 public class AIShooter : MonoBehaviour
 {
-    [SerializeField] private ShootComponent shootComponent;
     [SerializeField] private float cooldown = 1f;
-    private Transform playerTransform;
+    private ShootComponent shootComponent;
+    private Transform targetTransform;
     private float cooldownLeft = 0f;
+    private void Awake()
+    {
+        shootComponent = GetComponent<ShootComponent>();
+    }
     private void Start()
     {
-        playerTransform = Player.Instance.transform;
+        targetTransform = Player.Instance.transform;
     }
     private void Update()
     {
@@ -20,8 +25,8 @@ public class AIShooter : MonoBehaviour
             return;
         }
         cooldownLeft += cooldown;
-        Vector3 direction = (playerTransform.position - transform.position).normalized;
+        Vector3 direction = (targetTransform.position - transform.position).normalized;
         shootComponent.Shoot(direction);
     }
-   
+
 }

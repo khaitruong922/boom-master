@@ -2,12 +2,14 @@
 
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
     public Action OnHealthChanged { get; set; }
     public Action OnDead { get; set; }
     [SerializeField] private float maxHP = 200;
+    [SerializeField] private UnityEvent<float> onDamageTaken;
     private float currentHP;
     private void Awake()
     {
@@ -25,6 +27,7 @@ public class Health : MonoBehaviour
         currentHP -= damage;
         ClampHP();
         OnHealthChanged?.Invoke();
+        onDamageTaken?.Invoke(damage);
         print(currentHP);
     }
     public void Heal(float healAmount)

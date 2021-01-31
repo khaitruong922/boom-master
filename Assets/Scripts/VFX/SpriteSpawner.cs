@@ -7,8 +7,6 @@ public class SpriteSpawner : MonoBehaviour
     [SerializeField]
     private GameObject spritePrefab;
     [SerializeField]
-    private float lifetime = 1f;
-    [SerializeField]
     private Color color = Color.white;
     public void Spawn(Vector3 position)
     {
@@ -16,7 +14,6 @@ public class SpriteSpawner : MonoBehaviour
         if (spriteRenderer != null)
         {
             spriteRenderer.color = color;
-            Destroy(spriteRenderer.gameObject, lifetime);
         }
     }
     public void Spawn()

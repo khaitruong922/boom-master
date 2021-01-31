@@ -11,6 +11,8 @@ public class Bomb : MonoBehaviour
     [SerializeField] private float lifetime = 2f;
     [SerializeField] private int length = 2;
     [SerializeField] private UnityEvent onExploded;
+    public float Damage { get; set; }
+    public CharacterType CharacterType { get; set; }
     public BombPlacer BombPlacer { get; set; }
     private bool hasExploded = false;
     private Collider2D bombCollider;
@@ -54,7 +56,9 @@ public class Bomb : MonoBehaviour
                 collider.GetComponent<DestructibleTilemap>()?.DestroyTile(explosionPos);
                 break;
             }
-            Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
+            Explosion explosion = Instantiate(explosionPrefab, explosionPos, Quaternion.identity).GetComponent<Explosion>();
+            explosion.CharacterType = CharacterType;
+            explosion.Damage = Damage;
         }
     }
 }

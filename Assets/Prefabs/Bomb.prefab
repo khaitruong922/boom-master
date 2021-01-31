@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8642322830504709753}
   - component: {fileID: 1726307410328411831}
   - component: {fileID: 7354442589969724726}
-  - component: {fileID: 2654244019149752205}
   - component: {fileID: -6905433536461596932}
+  - component: {fileID: -7518218788234788632}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -103,32 +103,9 @@ MonoBehaviour:
   explosionPrefab: {fileID: 5089533828170267476, guid: b527b8022d20bdf4ab91beedbffbef29, type: 3}
   lifetime: 2
   length: 2
---- !u!61 &2654244019149752205
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3597680938602878935}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4, y: 0.4}
-    oldSize: {x: 1.024, y: 1.024}
-    newSize: {x: 5.12, y: 5.12}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
-  m_EdgeRadius: 0
+  onExploded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &-6905433536461596932
 Rigidbody2D:
   serializedVersion: 4
@@ -150,3 +127,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!58 &-7518218788234788632
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3597680938602878935}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02, y: 0.04}
+  serializedVersion: 2
+  m_Radius: 0.37

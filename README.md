@@ -33,3 +33,5 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 - [RPG Nature Tileset - Seasons](https://stealthix.itch.io/rpg-nature-tileset)
 
 - [Field of Green](https://guttykreum.itch.io/field-of-green)
+
+- [Lanitse assets : flames pack 1 (v0.1)](https://jiraton.itch.io/erana-iasana-assets-fxes-gunfire)

@@ -7,10 +7,11 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private float damage = 1;
-    [SerializeField] private float lifetime = 1f;
+    [SerializeField] private float damage = 20;
+    [SerializeField] private float lifetime = 1;
     [SerializeField] private bool canPassThroughObject = false;
-    [SerializeField] private UnityEvent onHit;
+    [SerializeField] private UnityEvent<Collider2D> onTargetHit;
+    [SerializeField] private UnityEvent<Vector3> onCollision;
     private Rigidbody2D rb;
     private CharacterType ownerType;
     private void Awake()
@@ -37,13 +38,14 @@ public class Projectile : MonoBehaviour
             if (hitCharacter.CharacterType != ownerType)
             {
                 health.TakeDamage(damage);
-                onHit?.Invoke();
+                onCollision?.Invoke(transform.position);
+                onTargetHit?.Invoke(other);
                 toBeDestroyed = true;
             }
         }
         if (other.GetComponent<IDestroyProjectile>() != null)
         {
-            onHit?.Invoke();
+            onCollision?.Invoke(transform.position);
             toBeDestroyed = true;
         }
         if (toBeDestroyed)
@@ -53,10 +55,8 @@ public class Projectile : MonoBehaviour
     }
     private void HandleCollision()
     {
-        if (!canPassThroughObject)
-        {
-            Destroy(gameObject);
-        }
+        if (canPassThroughObject) return;
+        Destroy(gameObject);
     }
     public void SetVelocity(Vector2 velocity)
     {

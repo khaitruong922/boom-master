@@ -25,6 +25,7 @@ public class Health : MonoBehaviour
         currentHP -= damage;
         ClampHP();
         OnHealthChanged?.Invoke();
+        print(currentHP);
     }
     public void Heal(float healAmount)
     {

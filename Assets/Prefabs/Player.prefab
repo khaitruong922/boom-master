@@ -193,10 +193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f2c3a174601c54795f464847dd35ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftKey: 97
-  rightKey: 100
   upKey: 119
+  leftKey: 97
   downKey: 115
+  rightKey: 100
 --- !u!114 &861597174326102082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1733ee0e36356b54ba932b0617d0a278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bombDamage: 20
   bombPrefab: {fileID: 3597680938602878935, guid: 864ce44b854d64c44a15d0060286d7a7, type: 3}
 --- !u!114 &7534687749468069514
 MonoBehaviour:

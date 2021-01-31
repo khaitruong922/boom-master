@@ -10,7 +10,7 @@ public class Bomb : MonoBehaviour
     [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private float lifetime = 2f;
     [SerializeField] private int length = 2;
-    [SerializeField] private UnityEvent onExploded;
+    [SerializeField] private UnityEvent<Vector3> onExploded;
     public float Damage { get; set; }
     public CharacterType CharacterType { get; set; }
     public BombPlacer BombPlacer { get; set; }
@@ -40,7 +40,7 @@ public class Bomb : MonoBehaviour
         CreateExplosions(Vector2.down);
         CreateExplosions(Vector2.left);
         CreateExplosions(Vector2.right);
-        onExploded?.Invoke();
+        onExploded?.Invoke(transform.position);
         BombPlacer.RemoveBombPosition(transform.position);
         Destroy(gameObject);
     }

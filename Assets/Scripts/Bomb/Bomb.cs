@@ -13,7 +13,7 @@ public class Bomb : MonoBehaviour
     [SerializeField] private UnityEvent<Vector3> onExploded;
     public float Damage { get; set; }
     public CharacterType CharacterType { get; set; }
-    public BombPlacer BombPlacer { get; set; }
+    public BombSpawner BombSpawner { get; set; }
     private bool hasExploded = false;
     private Collider2D bombCollider;
     private void Awake()
@@ -41,7 +41,7 @@ public class Bomb : MonoBehaviour
         CreateExplosions(Vector2.left);
         CreateExplosions(Vector2.right);
         onExploded?.Invoke(transform.position);
-        BombPlacer.RemoveBombPosition(transform.position);
+        BombSpawner.RemoveBombPosition(transform.position);
         Destroy(gameObject);
     }
     private void CreateExplosions(Vector3 direction)

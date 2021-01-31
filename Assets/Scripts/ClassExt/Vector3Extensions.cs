@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 namespace Vector3Extensions
 {
@@ -16,6 +15,10 @@ namespace Vector3Extensions
         public static Vector3 ToCellCenter(this Vector3 v)
         {
             return new Vector3(Mathf.FloorToInt(v.x) + 0.5f, Mathf.FloorToInt(v.y) + 0.5f, Mathf.FloorToInt(v.z));
+        }
+        public static Vector2 ToVector2(this Vector3 v)
+        {
+            return v;
         }
     }
 }

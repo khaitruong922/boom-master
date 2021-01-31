@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 4665174912436306168}
   - component: {fileID: 183544703425418452}
   - component: {fileID: 4621808006421184088}
-  - component: {fileID: 861597174326102082}
   - component: {fileID: 7534687749468069514}
   - component: {fileID: 4063292471111616815}
   - component: {fileID: 433976035}
   - component: {fileID: 5691731025454949215}
+  - component: {fileID: 2127345168079014707}
   m_Layer: 7
   m_Name: PlayerBase
   m_TagString: Untagged
@@ -140,20 +140,6 @@ MonoBehaviour:
   leftKey: 97
   downKey: 115
   rightKey: 100
---- !u!114 &861597174326102082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6571031581736241178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1733ee0e36356b54ba932b0617d0a278, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bombDamage: 20
-  bombPrefab: {fileID: 3597680938602878935, guid: 864ce44b854d64c44a15d0060286d7a7, type: 3}
 --- !u!114 &7534687749468069514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,8 +156,8 @@ MonoBehaviour:
   onKeyDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 861597174326102082}
-        m_TargetAssemblyTypeName: BombPlacer, Assembly-CSharp
+      - m_Target: {fileID: 2127345168079014707}
+        m_TargetAssemblyTypeName: BombSpawner, Assembly-CSharp
         m_MethodName: PlaceBomb
         m_Mode: 1
         m_Arguments:
@@ -240,3 +226,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &2127345168079014707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6571031581736241178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f8761d1a9875846a19069a8c3429ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombDamage: 20
+  bombPrefab: {fileID: 3597680938602878935, guid: 864ce44b854d64c44a15d0060286d7a7, type: 3}

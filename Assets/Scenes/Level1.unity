@@ -123,39 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &631400556 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1611633743302222995, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
-  m_PrefabInstance: {fileID: 4290605295465266352}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &631400558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631400556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 272220e6e1b7b614a842d9a213d0bbf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 3681861600292616879, guid: 0cb85a616405864469fc8c0b2e9131f2, type: 3}
-  shootForce: 15
-  damage: 15
---- !u!114 &631400559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631400556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0346d77842981ab42ba2bb20bd7d8ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 0.5
 --- !u!4 &1759352676 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6571031581736241183, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
@@ -8526,14 +8493,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1525914275479047973, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1525914275479047973, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.11
-      objectReference: {fileID: 0}
     - target: {fileID: 6571031581736241178, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
       propertyPath: m_Name
       value: Player
@@ -8593,7 +8552,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9145852432130418752, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418754, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_Name
@@ -8605,15 +8564,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418759, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418759, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418759, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418759, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_LocalRotation.w

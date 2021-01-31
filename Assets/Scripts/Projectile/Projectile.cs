@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         bool toBeDestroyed = false;
-
+        bool isCollided = false;
         Health health = other.GetComponent<Health>();
         if (health != null)
         {
@@ -33,22 +33,26 @@ public class Projectile : MonoBehaviour
             if (hitCharacter.CharacterType != CharacterType)
             {
                 health.TakeDamage(Damage);
-                onCollision?.Invoke(transform.position);
                 onTargetHit?.Invoke(other);
+                isCollided = true;
                 toBeDestroyed = true;
             }
         }
         if (other.GetComponent<IDestroyProjectile>() != null)
         {
-            onCollision?.Invoke(transform.position);
+            isCollided = true;
             toBeDestroyed = true;
         }
-        if (toBeDestroyed)
+        DestructibleTilemap destructibleTilemap = other.GetComponent<DestructibleTilemap>();
+        if (destructibleTilemap != null)
         {
-            HandleCollision();
+            destructibleTilemap.DestroyTile(transform.position);
+            isCollided = true;
         }
+        if (isCollided) onCollision?.Invoke(transform.position);
+        if (toBeDestroyed) HandleDestroy();
     }
-    private void HandleCollision()
+    private void HandleDestroy()
     {
         if (canPassThroughObject) return;
         Destroy(gameObject);

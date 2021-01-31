@@ -13,4 +13,12 @@ public class MoveComponent : MonoBehaviour
     {
         rb.velocity = direction * moveSpeed;
     }
+    public void MoveTowards(Vector2 destination)
+    {
+        rb.MovePosition(Vector2.MoveTowards(rb.position, destination, moveSpeed * Time.deltaTime));
+    }
+    public void MoveAwayFrom(Vector2 destination)
+    {
+        rb.MovePosition(Vector2.MoveTowards(rb.position, destination, - moveSpeed * Time.deltaTime));
+    }
 }

@@ -38,7 +38,6 @@ public class AIBombThrower : MonoBehaviour
     {
         Vector2 diff = targetTransform.position - transform.position;
         Vector2 diffRight = diff.Rotate(90).normalized;
-        print(diffRight);
         for (int i = -bombCountPerSide; i <= bombCountPerSide; i++)
         {
             ThrowBombTo((targetTransform.position.ToVector2() + diffRight * i).Extend(2));

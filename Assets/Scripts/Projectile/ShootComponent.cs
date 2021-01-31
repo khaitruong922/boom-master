@@ -8,11 +8,20 @@ public class ShootComponent : MonoBehaviour
     private GameObject projectile;
     [SerializeField]
     private float shootForce = 30;
+    [SerializeField]
+    private float damage = 15;
+    private CharacterType characterType;
+    private void Awake()
+    {
+        characterType = GetComponentInParent<ICharacter>().CharacterType;
+    }
     public void Shoot(Vector2 direction)
     {
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Projectile p = Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, angle)).GetComponent<Projectile>();
-        p.Init(direction * shootForce, GetComponentInParent<ICharacter>().CharacterType);
+        p.SetVelocity(direction * shootForce);
+        p.CharacterType = characterType;
+        p.Damage = damage;
     }
     public void Shoot()
     {

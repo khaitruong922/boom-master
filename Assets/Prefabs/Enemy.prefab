@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 3681861600292616879, guid: 0cb85a616405864469fc8c0b2e9131f2, type: 3}
   shootForce: 15
+  damage: 15
 --- !u!114 &4718814200791405713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0346d77842981ab42ba2bb20bd7d8ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1.5
+  cooldown: 1
 --- !u!1 &1789513762122585683
 GameObject:
   m_ObjectHideFlags: 0

@@ -186,7 +186,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1789513762122585686}
   - component: {fileID: 7752918389425380038}
-  - component: {fileID: 1789513762122585680}
   - component: {fileID: 241884845228875441}
   - component: {fileID: 3094779165776614841}
   - component: {fileID: 5192752835419067915}
@@ -196,6 +195,7 @@ GameObject:
   - component: {fileID: 117015575}
   - component: {fileID: 7246563684370002596}
   - component: {fileID: 1451346398797694481}
+  - component: {fileID: -3058190449669351076}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -270,32 +270,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1789513762122585680
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789513762122585683}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.2}
-    oldSize: {x: 1.5, y: 1.5}
-    newSize: {x: 1.5, y: 1.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.2}
-  m_EdgeRadius: 0
 --- !u!50 &241884845228875441
 Rigidbody2D:
   serializedVersion: 4
@@ -426,7 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 0.25
+  radius: 0.2
   height: 0.01
   repathRate: 0.5
   canSearch: 1
@@ -442,9 +416,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
+  slowdownDistance: 3
   pickNextWaypointDist: 2
-  endReachedDistance: 0.2
+  endReachedDistance: 3
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -475,3 +449,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971bb88c0dffdfe49941b0a11e40e028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &-3058190449669351076
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789513762122585683}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2

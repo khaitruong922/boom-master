@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &781167184 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 342025511784443792, guid: 5eef164a6242a3547bf7935143e1c257, type: 3}
+  m_PrefabInstance: {fileID: 1761907213}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1761907213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -377,7 +382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3162214481827613441, guid: a297efa9aba121e429171b7388478091, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3162214481827613441, guid: a297efa9aba121e429171b7388478091, type: 3}
       propertyPath: m_LocalPosition.z
@@ -414,7 +419,7 @@ PrefabInstance:
     - target: {fileID: 3162214481827613470, guid: a297efa9aba121e429171b7388478091, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 781167184}
     - target: {fileID: 3162214481827613471, guid: a297efa9aba121e429171b7388478091, type: 3}
       propertyPath: m_Name
       value: Cinemachine
@@ -584,7 +589,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9145852432130418752, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418754, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_Name
@@ -596,15 +601,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418759, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418759, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418759, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418759, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_LocalRotation.w

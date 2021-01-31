@@ -23,7 +23,7 @@ public class Bomb : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Explosion explosion = other.GetComponent<Explosion>();
-        if (explosion != null) Explode();
+        if (explosion != null && explosion.CharacterType == CharacterType) Explode();
     }
     private void Update()
     {

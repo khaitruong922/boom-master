@@ -74,7 +74,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f8761d1a9875846a19069a8c3429ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombDamage: 15
+  lifetime: 2
+  length: 2
+  damage: 20
   bombPrefab: {fileID: 3597680938602878935, guid: 864ce44b854d64c44a15d0060286d7a7, type: 3}
 --- !u!114 &828325373
 MonoBehaviour:
@@ -279,6 +281,7 @@ GameObject:
   - component: {fileID: 1789513762122585686}
   - component: {fileID: 7752918389425380038}
   - component: {fileID: 241884845228875441}
+  - component: {fileID: -3058190449669351076}
   - component: {fileID: 3094779165776614841}
   - component: {fileID: 7809556171999213310}
   - component: {fileID: 2548733380910951140}
@@ -286,7 +289,7 @@ GameObject:
   - component: {fileID: 117015575}
   - component: {fileID: 7246563684370002596}
   - component: {fileID: 1451346398797694481}
-  - component: {fileID: -3058190449669351076}
+  - component: {fileID: 8690697010921064897}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -383,6 +386,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!58 &-3058190449669351076
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789513762122585683}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2
 --- !u!114 &3094779165776614841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,19 +546,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971bb88c0dffdfe49941b0a11e40e028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &-3058190449669351076
-CircleCollider2D:
+--- !u!114 &8690697010921064897
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789513762122585683}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.2
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77ce1da772ae074fb958f69772e3bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerRange: 5

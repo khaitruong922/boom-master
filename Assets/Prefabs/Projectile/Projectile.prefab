@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3681861600292616878}
   - component: {fileID: 3681861600292616864}
   - component: {fileID: 3681861600292616865}
-  - component: {fileID: -2065937535008722176}
+  - component: {fileID: 3797124107500202249}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -155,17 +155,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f22a1c8762c95e45a65023d302c935b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
   lifetime: 1
-  canPassThroughObject: 0
   onTargetHit:
     m_PersistentCalls:
       m_Calls: []
   onCollision:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -2065937535008722176}
-        m_TargetAssemblyTypeName: SpriteSpawner, Assembly-CSharp
+      - m_Target: {fileID: 3797124107500202249}
+        m_TargetAssemblyTypeName: PoolObjectFactory, Assembly-CSharp
         m_MethodName: Spawn
         m_Mode: 0
         m_Arguments:
@@ -176,7 +174,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-2065937535008722176
+--- !u!114 &3797124107500202249
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,8 +183,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3681861600292616879}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e466c61a8b2efad49b30d0e67aeaa3c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 1659bf05dc262874d923825735854eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePrefab: {fileID: 1931719530011669292, guid: eeb97dfbabd57f9439c970b938311d14, type: 3}
-  color: {r: 0.32941177, g: 0, b: 1, a: 1}
+  type: 3

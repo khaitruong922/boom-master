@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8642322830504709753}
   - component: {fileID: 1726307410328411831}
   - component: {fileID: 7354442589969724726}
-  - component: {fileID: 8622084744092743633}
   - component: {fileID: -6905433536461596932}
   - component: {fileID: -7518218788234788632}
   m_Layer: 0
@@ -101,23 +100,9 @@ MonoBehaviour:
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  explosionPrefab: {fileID: 5089533828170267476, guid: b527b8022d20bdf4ab91beedbffbef29, type: 3}
   onExploded:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8622084744092743633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3597680938602878935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 377dfb8caa8701d45b75affd5045f933, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
 --- !u!50 &-6905433536461596932
 Rigidbody2D:
   serializedVersion: 4

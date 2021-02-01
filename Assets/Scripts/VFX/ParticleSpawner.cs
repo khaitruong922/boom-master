@@ -19,7 +19,6 @@ public class ParticleSpawner : MonoBehaviour
             settings.startColor = color;
             Destroy(particleSystem.gameObject, lifetime);
         }
-
     }
     public void Spawn()
     {

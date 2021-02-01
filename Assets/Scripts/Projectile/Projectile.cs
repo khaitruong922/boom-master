@@ -47,7 +47,7 @@ public class Projectile : MonoBehaviour
     }
     private void DestroyProjectile()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
     public void SetVelocity(Vector2 velocity)
     {

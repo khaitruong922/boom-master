@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vector2Extensions;
 
+[RequireComponent(typeof(PoolObjectFactory))]
 public class BombSpawner : MonoBehaviour
 {
     [SerializeField] private float lifetime = 2f;
     [SerializeField] private int length = 2;
     [SerializeField] private float damage = 20f;
-    [SerializeField] private GameObject bombPrefab;
+    private PoolObjectFactory bombFactory;
     private List<Vector2> bombPositions = new List<Vector2>();
     private CharacterType characterType;
     private void Awake()
     {
+        bombFactory = GetComponent<PoolObjectFactory>();
         characterType = GetComponentInParent<ICharacter>().CharacterType;
     }
     public void PlaceBomb(Vector2 position)
@@ -32,7 +34,7 @@ public class BombSpawner : MonoBehaviour
     }
     private Bomb CreateBomb(Vector2 position)
     {
-        Bomb b = Instantiate(bombPrefab, position, Quaternion.identity).GetComponent<Bomb>();
+        Bomb b = bombFactory.Get(position).GetComponent<Bomb>();
         b.BombSpawner = this;
         b.Damage = damage;
         b.Lifetime = lifetime;

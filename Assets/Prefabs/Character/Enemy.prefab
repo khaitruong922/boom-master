@@ -77,7 +77,6 @@ MonoBehaviour:
   lifetime: 2
   length: 2
   damage: 20
-  bombPrefab: {fileID: 45877100237310706, guid: 8cd40eb770de0944b8c46ff132ded907, type: 3}
 --- !u!114 &828325373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272220e6e1b7b614a842d9a213d0bbf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 3681861600292616879, guid: 0cb85a616405864469fc8c0b2e9131f2, type: 3}
   shootForce: 15
   damage: 15
 --- !u!114 &4718814200791405713
@@ -226,7 +224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272220e6e1b7b614a842d9a213d0bbf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 3681861600292616879, guid: 0cb85a616405864469fc8c0b2e9131f2, type: 3}
   shootForce: 15
   damage: 15
 --- !u!114 &631400559

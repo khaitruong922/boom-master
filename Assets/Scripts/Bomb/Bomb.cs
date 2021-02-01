@@ -4,10 +4,10 @@ using UnityEngine;
 using System;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(PoolObjectFactory))]
 public class Bomb : MonoBehaviour
 {
     [SerializeField] private LayerMask wallLayerMask;
-    [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private UnityEvent<Vector3> onExploded;
     private float lifetime = 2f;
     private int length = 2;
@@ -16,7 +16,7 @@ public class Bomb : MonoBehaviour
     public BombSpawner BombSpawner { get; set; }
     public int Length { get => length; set => length = value; }
     public float Lifetime { get => lifetime; set => lifetime = value; }
-
+    private PoolObjectFactory explosionFactory;
     private bool hasExploded = false;
     private Collider2D bombCollider;
     private void Awake()
@@ -33,7 +33,7 @@ public class Bomb : MonoBehaviour
     {
         if (hasExploded) return;
         hasExploded = true;
-        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        SpawnExplosion(transform.position);
         CreateExplosions(Vector2.up);
         CreateExplosions(Vector2.down);
         CreateExplosions(Vector2.left);
@@ -61,7 +61,7 @@ public class Bomb : MonoBehaviour
     }
     private void SpawnExplosion(Vector3 position)
     {
-        Explosion explosion = Instantiate(explosionPrefab, position, Quaternion.identity).GetComponent<Explosion>();
+        Explosion explosion = explosionFactory.Get(transform.position).GetComponent<Explosion>();
         explosion.CharacterType = CharacterType;
         explosion.Damage = Damage;
     }

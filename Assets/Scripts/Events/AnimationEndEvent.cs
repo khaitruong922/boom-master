@@ -6,11 +6,18 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Animator))]
 public class AnimationEndEvent : MonoBehaviour
 {
+    private Animator animator;
     [SerializeField] private UnityEvent onAnimationEnd;
-    private IEnumerator Start()
+    private void Awake() {
+        animator = GetComponent<Animator>();
+    }
+    private void OnEnable()
     {
+        StartCoroutine(InvokeAfterAnimationEnds());
+    }
+    private IEnumerator InvokeAfterAnimationEnds(){
         yield return new WaitForEndOfFrame();
-        yield return new WaitForSeconds(GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         onAnimationEnd?.Invoke();
     }
 }

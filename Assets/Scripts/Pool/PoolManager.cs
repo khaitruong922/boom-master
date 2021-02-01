@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GameObjectExtensions;
 public enum PoolObjectType
 {
     Bomb,
@@ -36,13 +35,6 @@ public class PoolManager : MonoBehaviourSingleton<PoolManager>
         foreach (var pool in pools)
         {
             pool.Queue = new Queue<GameObject>();
-            PoolObject poolObject = pool.Prefab.GetComponent<PoolObject>();
-            if (poolObject == null)
-            {
-                poolObject = pool.Prefab.AddComponent<PoolObject>();
-                Debug.Log("Adding PoolObject component to " + pool.Type);
-            }
-            poolObject.Type = pool.Type;
             poolDictionary[pool.Type] = pool;
             AddToPool(pool.Type, pool.InitialCount);
         }
@@ -62,7 +54,8 @@ public class PoolManager : MonoBehaviourSingleton<PoolManager>
         GameObject g = queue.Dequeue();
         g.transform.position = position;
         g.transform.rotation = quaternion;
-        return g.Active();
+        g.SetActive(true);
+        return g;
     }
     public GameObject Get(PoolObjectType type, Vector3 position)
     {
@@ -70,16 +63,24 @@ public class PoolManager : MonoBehaviourSingleton<PoolManager>
     }
     private void AddToPool(PoolObjectType type, int count = 1)
     {
+        print("Adding " + count + type.ToString() + " object to pool");
         for (int i = 0; i < count; i++)
         {
             GameObject g = Instantiate(poolDictionary[type].Prefab, transform);
+            PoolObject poolObject = g.GetComponent<PoolObject>();
+            if (poolObject == null)
+            {
+                Debug.LogWarning("Expecting PoolObject component on " + type);
+                continue;
+            }
+            poolObject.Type = type;
             g.SetActive(false);
             poolDictionary[type].Queue.Enqueue(g);
         }
     }
-    public void ReturnToPool(PoolObjectType p, GameObject g)
+    public void ReturnToPool(PoolObjectType type, GameObject g)
     {
         g.SetActive(false);
-        poolDictionary[p].Queue.Enqueue(g);
+        poolDictionary[type].Queue.Enqueue(g);
     }
 }

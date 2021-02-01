@@ -8,10 +8,9 @@ public class MoveTowardPosition : MonoBehaviour
     public Vector2 TargetPosition { get; set; }
     private void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, TargetPosition, Speed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, TargetPosition) == 0)
+        if (Vector2.Distance(transform.position, TargetPosition) > 0)
         {
-            Destroy(this);
+            transform.position = Vector2.MoveTowards(transform.position, TargetPosition, Speed * Time.deltaTime);
         }
     }
 }

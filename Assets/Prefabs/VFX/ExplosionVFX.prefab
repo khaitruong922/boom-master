@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1931719530011669298}
   - component: {fileID: 1931719530011669299}
   - component: {fileID: 7224375301344101757}
+  - component: {fileID: 8779929843735299828}
   m_Layer: 0
   m_Name: ExplosionVFX
   m_TagString: Untagged
@@ -118,10 +119,10 @@ MonoBehaviour:
   onAnimationEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1931719530011669292}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8779929843735299828}
+        m_TargetAssemblyTypeName: PoolObject, Assembly-CSharp
+        m_MethodName: ReturnToPool
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -130,3 +131,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8779929843735299828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931719530011669292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b66b3eb282e01e47817fac86b62cb74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

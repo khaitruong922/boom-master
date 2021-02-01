@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(PoolObjectFactory))]
+[RequireComponent(typeof(PoolObjectFactory), typeof(PoolObject))]
 public class Bomb : MonoBehaviour
 {
     [SerializeField] private LayerMask wallLayerMask;
@@ -17,17 +17,25 @@ public class Bomb : MonoBehaviour
     public int Length { get => length; set => length = value; }
     public float Lifetime { get => lifetime; set => lifetime = value; }
     private PoolObjectFactory explosionFactory;
+    private PoolObject poolObject;
+    private float timeElapsed = 0;
     private bool hasExploded = false;
     private Collider2D bombCollider;
     private void Awake()
     {
+        explosionFactory = GetComponent<PoolObjectFactory>();
         bombCollider = GetComponent<Collider2D>();
+        poolObject = GetComponent<PoolObject>();
+    }
+    private void OnEnable()
+    {
+        hasExploded = false;
+        timeElapsed = 0;
     }
     private void Update()
     {
-        lifetime -= Time.deltaTime;
-        if (lifetime > 0) return;
-        Explode();
+        timeElapsed += Time.deltaTime;
+        if (timeElapsed > lifetime) Explode();
     }
     public void Explode()
     {
@@ -40,7 +48,7 @@ public class Bomb : MonoBehaviour
         CreateExplosions(Vector2.right);
         onExploded?.Invoke(transform.position);
         BombSpawner.RemoveBombPosition(transform.position);
-        Destroy(gameObject);
+        poolObject.ReturnToPool();
     }
     private void CreateExplosions(Vector3 direction)
     {
@@ -61,7 +69,7 @@ public class Bomb : MonoBehaviour
     }
     private void SpawnExplosion(Vector3 position)
     {
-        Explosion explosion = explosionFactory.Get(transform.position).GetComponent<Explosion>();
+        Explosion explosion = explosionFactory.Get(position).GetComponent<Explosion>();
         explosion.CharacterType = CharacterType;
         explosion.Damage = Damage;
     }

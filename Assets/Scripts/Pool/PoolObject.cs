@@ -5,11 +5,11 @@ using UnityEngine;
 public class PoolObject : MonoBehaviour
 {
     public PoolObjectType Type { get; set; }
-    private void OnDisable()
+    private void Start()
     {
-        // ReturnToPool();
+        print(Type);
     }
-    private void ReturnToPool()
+    public void ReturnToPool()
     {
         PoolManager.Instance.ReturnToPool(Type, gameObject);
     }

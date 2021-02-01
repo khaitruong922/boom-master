@@ -77,7 +77,7 @@ MonoBehaviour:
   lifetime: 2
   length: 2
   damage: 20
-  bombPrefab: {fileID: 3597680938602878935, guid: 864ce44b854d64c44a15d0060286d7a7, type: 3}
+  bombPrefab: {fileID: 45877100237310706, guid: 8cd40eb770de0944b8c46ff132ded907, type: 3}
 --- !u!114 &828325373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +285,6 @@ GameObject:
   - component: {fileID: 7809556171999213310}
   - component: {fileID: 117015576}
   - component: {fileID: 117015575}
-  - component: {fileID: 7246563684370002596}
   - component: {fileID: 1451346398797694481}
   - component: {fileID: 8690697010921064897}
   m_Layer: 8
@@ -454,20 +453,6 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!114 &7246563684370002596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789513762122585683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  target: {fileID: 0}
 --- !u!114 &1451346398797694481
 MonoBehaviour:
   m_ObjectHideFlags: 0

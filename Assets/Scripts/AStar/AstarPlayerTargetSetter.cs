@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
 
-[RequireComponent(typeof(AIDestinationSetter))]
+[RequireComponent(typeof(AIPath))]
 public class AstarPlayerTargetSetter : MonoBehaviour
 {
+    private Transform targetTransform;
+    private AIPath aIPath;
+    private void Awake()
+    {
+        aIPath = GetComponent<AIPath>();
+    }
     private void Start()
     {
-        GetComponent<AIDestinationSetter>().target = Player.Instance.transform;
+        targetTransform = Player.Instance.transform;
+    }
+    private void Update()
+    {
+        aIPath.destination = targetTransform.position;
     }
 }

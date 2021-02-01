@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6571031581736241183, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6571031581736241183, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
       propertyPath: m_LocalPosition.y
@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 7534687749468069514, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
       propertyPath: onKeyDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4758678784842214588}
+      objectReference: {fileID: 0}
     - target: {fileID: 7534687749468069514, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
       propertyPath: onKeyDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlaceBomb
@@ -83,14 +83,3 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6571031581736241178, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
   m_PrefabInstance: {fileID: 6885968700290852751}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4758678784842214588 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2127345168079014707, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
-  m_PrefabInstance: {fileID: 6885968700290852751}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342025511784443797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08f8761d1a9875846a19069a8c3429ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

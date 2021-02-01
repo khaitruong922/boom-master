@@ -63,7 +63,6 @@ public class PoolManager : MonoBehaviourSingleton<PoolManager>
     }
     private void AddToPool(PoolObjectType type, int count = 1)
     {
-        print("Adding " + count + type.ToString() + " object to pool");
         for (int i = 0; i < count; i++)
         {
             GameObject g = Instantiate(poolDictionary[type].Prefab, transform);

@@ -587,14 +587,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3047856118875683606, guid: 5803bec90df70944b8eb7f4dbb0ecf40, type: 3}
-      propertyPath: pools.Array.data[1].prefab
-      value: 
-      objectReference: {fileID: 4375058825171892405, guid: 4aa22ec8ce1185547b65d3e44499600c, type: 3}
-    - target: {fileID: 3047856118875683606, guid: 5803bec90df70944b8eb7f4dbb0ecf40, type: 3}
-      propertyPath: pools.Array.data[0].initialCount
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 6471367975449683317, guid: 5803bec90df70944b8eb7f4dbb0ecf40, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -652,10 +644,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9145852432130418752, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
-      propertyPath: orthographic size
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418754, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_Name
       value: GameCamera
@@ -666,7 +654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418759, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418759, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_LocalPosition.y
@@ -674,7 +662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418759, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418759, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_LocalRotation.w

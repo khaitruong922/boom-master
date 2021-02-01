@@ -5,7 +5,9 @@ using Vector2Extensions;
 
 public class BombSpawner : MonoBehaviour
 {
-    [SerializeField] private float bombDamage = 20f;
+    [SerializeField] private float lifetime = 2f;
+    [SerializeField] private int length = 2;
+    [SerializeField] private float damage = 20f;
     [SerializeField] private GameObject bombPrefab;
     private List<Vector2> bombPositions = new List<Vector2>();
     private CharacterType characterType;
@@ -32,7 +34,9 @@ public class BombSpawner : MonoBehaviour
     {
         Bomb b = Instantiate(bombPrefab, position, Quaternion.identity).GetComponent<Bomb>();
         b.BombSpawner = this;
-        b.Damage = bombDamage;
+        b.Damage = damage;
+        b.Lifetime = lifetime;
+        b.Length = length;
         b.CharacterType = characterType;
         return b;
     }

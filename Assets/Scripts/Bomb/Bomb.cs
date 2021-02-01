@@ -8,22 +8,20 @@ public class Bomb : MonoBehaviour
 {
     [SerializeField] private LayerMask wallLayerMask;
     [SerializeField] private GameObject explosionPrefab;
-    [SerializeField] private float lifetime = 2f;
-    [SerializeField] private int length = 2;
     [SerializeField] private UnityEvent<Vector3> onExploded;
+    private float lifetime = 2f;
+    private int length = 2;
     public float Damage { get; set; }
     public CharacterType CharacterType { get; set; }
     public BombSpawner BombSpawner { get; set; }
+    public int Length { get => length; set => length = value; }
+    public float Lifetime { get => lifetime; set => lifetime = value; }
+
     private bool hasExploded = false;
     private Collider2D bombCollider;
     private void Awake()
     {
         bombCollider = GetComponent<Collider2D>();
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Explosion explosion = other.GetComponent<Explosion>();
-        if (explosion != null && explosion.CharacterType == CharacterType) Explode();
     }
     private void Update()
     {

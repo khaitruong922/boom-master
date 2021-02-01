@@ -16,12 +16,16 @@ public class Explosion : MonoBehaviour
             {
                 health.TakeDamage(Damage);
             }
+            return;
         }
         DestructibleTilemap destructibleTilemap = other.GetComponent<DestructibleTilemap>();
         if (destructibleTilemap != null)
         {
             destructibleTilemap.DestroyTile(transform.position);
+            return;
         }
+        Bomb bomb = other.GetComponent<Bomb>();
+        if (bomb != null && bomb.CharacterType == CharacterType) bomb.Explode();
     }
 }
 

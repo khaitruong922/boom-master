@@ -4,8 +4,8 @@ using UnityEngine;
 using System;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(PoolObjectFactory), typeof(PoolObject))]
-public class Bomb : MonoBehaviour
+[RequireComponent(typeof(PoolObjectFactory))]
+public class Bomb : PoolObject
 {
     [SerializeField] private LayerMask wallLayerMask;
     [SerializeField] private UnityEvent<Vector3> onExploded;
@@ -17,7 +17,6 @@ public class Bomb : MonoBehaviour
     public int Length { get => length; set => length = value; }
     public float Lifetime { get => lifetime; set => lifetime = value; }
     private PoolObjectFactory explosionFactory;
-    private PoolObject poolObject;
     private float timeElapsed = 0;
     private bool hasExploded = false;
     private Collider2D bombCollider;
@@ -25,7 +24,6 @@ public class Bomb : MonoBehaviour
     {
         explosionFactory = GetComponent<PoolObjectFactory>();
         bombCollider = GetComponent<Collider2D>();
-        poolObject = GetComponent<PoolObject>();
     }
     private void OnEnable()
     {
@@ -48,7 +46,7 @@ public class Bomb : MonoBehaviour
         CreateExplosions(Vector2.right);
         onExploded?.Invoke(transform.position);
         BombSpawner.RemoveBombPosition(transform.position);
-        poolObject.ReturnToPool();
+        DestroyBomb();
     }
     private void CreateExplosions(Vector3 direction)
     {
@@ -72,5 +70,9 @@ public class Bomb : MonoBehaviour
         Explosion explosion = explosionFactory.Get(position).GetComponent<Explosion>();
         explosion.CharacterType = CharacterType;
         explosion.Damage = Damage;
+    }
+    private void DestroyBomb()
+    {
+        ReturnToPool();
     }
 }

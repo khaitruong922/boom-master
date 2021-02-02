@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explosion : MonoBehaviour
+public class Explosion : PoolObject
 {
     public float Damage { get; set; }
     public CharacterType CharacterType { get; set; }

@@ -4,13 +4,12 @@ using UnityEngine;
 using System;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(PoolObject))]
-public class Projectile : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D))]
+public class Projectile : PoolObject
 {
     [SerializeField] private float lifetime = 1;
     [SerializeField] private UnityEvent<Collider2D> onTargetHit;
     [SerializeField] private UnityEvent<Vector3> onCollision;
-    private PoolObject poolObject;
     public float Damage { get; set; }
     public CharacterType CharacterType { get; set; }
     private Rigidbody2D rb;
@@ -18,7 +17,6 @@ public class Projectile : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        poolObject = GetComponent<PoolObject>();
     }
     private void OnEnable()
     {
@@ -59,7 +57,7 @@ public class Projectile : MonoBehaviour
     }
     private void DestroyProjectile()
     {
-        poolObject.ReturnToPool();
+        ReturnToPool();
     }
     public void SetVelocity(Vector2 velocity)
     {

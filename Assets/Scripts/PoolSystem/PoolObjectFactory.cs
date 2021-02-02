@@ -4,16 +4,21 @@ using UnityEngine;
 public class PoolObjectFactory : MonoBehaviour
 {
     [SerializeField] private PoolObjectType type;
+    private PoolManager poolManager;
+    private void Start()
+    {
+        poolManager = PoolManager.Instance;
+    }
     public GameObject Get(Vector3 position)
     {
-        return PoolManager.Instance.Get(type, position);
+        return poolManager.Get(type, position);
     }
     public GameObject Get(Vector3 position, Quaternion quaternion)
     {
-        return PoolManager.Instance.Get(type, position, quaternion);
+        return poolManager.Get(type, position, quaternion);
     }
     public void Spawn(Vector3 position)
     {
-        PoolManager.Instance.Get(type, position);
+        poolManager.Get(type, position);
     }
 }

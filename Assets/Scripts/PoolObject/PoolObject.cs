@@ -3,11 +3,17 @@ using UnityEngine;
 public class PoolObject : MonoBehaviour
 {
     public PoolObjectType Type { get; set; }
+    protected PoolManager poolManager;
+    protected virtual void Start()
+    {
+        poolManager = PoolManager.Instance;
+    }
     public void ReturnToPool()
     {
-        PoolManager.Instance.ReturnToPool(Type, gameObject);
+        poolManager.ReturnToPool(Type, gameObject);
     }
 }
+
 public enum PoolObjectType
 {
     Bomb,

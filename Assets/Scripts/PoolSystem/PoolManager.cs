@@ -1,20 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum PoolObjectType
-{
-    Bomb,
-    BombThrow,
-    Explosion,
-    ExplosionVFX,
-    FlameBullet
-}
+
 [System.Serializable]
 public class Pool
 {
     [SerializeField]
     private PoolObjectType type;
-
     public PoolObjectType Type => type;
     [SerializeField]
     private GameObject prefab;
@@ -73,8 +64,7 @@ public class PoolManager : MonoBehaviourSingleton<PoolManager>
                 continue;
             }
             poolObject.Type = type;
-            g.SetActive(false);
-            poolDictionary[type].Queue.Enqueue(g);
+            ReturnToPool(type, g);
         }
     }
     public void ReturnToPool(PoolObjectType type, GameObject g)

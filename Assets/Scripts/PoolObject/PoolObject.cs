@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PoolObject : MonoBehaviour
@@ -9,4 +7,12 @@ public class PoolObject : MonoBehaviour
     {
         PoolManager.Instance.ReturnToPool(Type, gameObject);
     }
+}
+public enum PoolObjectType
+{
+    Bomb,
+    BombThrow,
+    Explosion,
+    ExplosionVFX,
+    FlameBullet
 }

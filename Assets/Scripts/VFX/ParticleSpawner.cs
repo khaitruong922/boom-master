@@ -1,7 +1,6 @@
 ﻿#pragma warning disable 0649
 using UnityEngine;
-using System.Collections.Generic;
-using System.Collections;
+
 public class ParticleSpawner : MonoBehaviour
 {
     [SerializeField]

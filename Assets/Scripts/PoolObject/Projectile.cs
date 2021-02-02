@@ -1,7 +1,6 @@
 #pragma warning disable 0649
 
 using UnityEngine;
-using System;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]

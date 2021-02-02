@@ -13,6 +13,7 @@ public class Pool
     [SerializeField]
     private int initialCount;
     public int InitialCount => initialCount;
+    public GameObject Container { get; set; }
     public Queue<GameObject> Queue { get; set; }
 }
 public class PoolManager : MonoBehaviourSingleton<PoolManager>
@@ -25,6 +26,8 @@ public class PoolManager : MonoBehaviourSingleton<PoolManager>
         poolDictionary = new Dictionary<PoolObjectType, Pool>();
         foreach (var pool in pools)
         {
+            pool.Container = new GameObject();
+            pool.Container.name = pool.Type.ToString() + " Pool";
             pool.Queue = new Queue<GameObject>();
             poolDictionary[pool.Type] = pool;
             AddToPool(pool.Type, pool.InitialCount);
@@ -64,6 +67,7 @@ public class PoolManager : MonoBehaviourSingleton<PoolManager>
                 continue;
             }
             poolObject.Type = type;
+            g.transform.parent = poolDictionary[type].Container.transform;
             ReturnToPool(type, g);
         }
     }

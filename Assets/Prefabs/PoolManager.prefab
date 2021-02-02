@@ -52,7 +52,7 @@ MonoBehaviour:
     initialCount: 30
   - type: 2
     prefab: {fileID: 5089533828170267476, guid: b527b8022d20bdf4ab91beedbffbef29, type: 3}
-    initialCount: 50
+    initialCount: 100
   - type: 3
     prefab: {fileID: 1931719530011669292, guid: eeb97dfbabd57f9439c970b938311d14, type: 3}
     initialCount: 50

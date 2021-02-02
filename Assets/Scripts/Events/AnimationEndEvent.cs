@@ -7,14 +7,16 @@ public class AnimationEndEvent : MonoBehaviour
 {
     private Animator animator;
     [SerializeField] private UnityEvent onAnimationEnd;
-    private void Awake() {
+    private void Awake()
+    {
         animator = GetComponent<Animator>();
     }
     private void OnEnable()
     {
         StartCoroutine(InvokeAfterAnimationEnds());
     }
-    private IEnumerator InvokeAfterAnimationEnds(){
+    private IEnumerator InvokeAfterAnimationEnds()
+    {
         yield return new WaitForEndOfFrame();
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         onAnimationEnd?.Invoke();

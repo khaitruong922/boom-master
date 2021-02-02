@@ -7,7 +7,7 @@ public class IntervalEvent : MonoBehaviour
     [SerializeField] private float initialCooldown = 0;
     [SerializeField] private UnityEvent onInterval;
     private float cooldownLeft;
-    private void Start()
+    private void OnEnable()
     {
         cooldownLeft = initialCooldown;
     }

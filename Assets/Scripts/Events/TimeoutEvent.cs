@@ -6,7 +6,7 @@ public class TimeoutEvent : MonoBehaviour
     [SerializeField] private float cooldown = 1;
     [SerializeField] private UnityEvent onTimeout;
     private float cooldownLeft;
-    private void Start()
+    private void OnEnable()
     {
         cooldownLeft = cooldown;
     }
@@ -17,7 +17,6 @@ public class TimeoutEvent : MonoBehaviour
             cooldownLeft -= Time.deltaTime;
             return;
         }
-        
         onTimeout?.Invoke();
         Destroy(this);
     }

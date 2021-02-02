@@ -35,3 +35,5 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 - [Field of Green](https://guttykreum.itch.io/field-of-green)
 
 - [Lanitse assets : flames pack 1 (v0.1)](https://jiraton.itch.io/erana-iasana-assets-fxes-gunfire)
+
+- [Sci-Fi Character Pack 8](https://penusbmic.itch.io/sci-fi-character-pack-8)

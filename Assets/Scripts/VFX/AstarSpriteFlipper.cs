@@ -1,27 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class SpriteFlipper : MonoBehaviour
+using Pathfinding;
+public class AstarSpriteFlipper : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private AIPath aIPath;
     private bool isFlipped = false;
+    [SerializeField] private float velocityToFlip = 0.2f;
     private Vector3 normalScale = new Vector3(1, 1, 1);
     private Vector3 flippedScale = new Vector3(-1, 1, 1);
     private void Awake()
     {
-        rb = GetComponentInParent<Rigidbody2D>();
+        aIPath = GetComponentInParent<AIPath>();
     }
     private void Update()
     {
-        if (!isFlipped & rb.velocity.x < 0.01f)
+        if (!isFlipped & aIPath.desiredVelocity.x < velocityToFlip)
         {
             transform.localScale = flippedScale;
             isFlipped = true;
             return;
 
         }
-        if (isFlipped & rb.velocity.x > 0.01f)
+        if (isFlipped & aIPath.desiredVelocity.x > velocityToFlip)
         {
             transform.localScale = normalScale;
             isFlipped = false;

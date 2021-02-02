@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  drawGizmos: 1
+  drawGizmos: 0
   detailedGizmos: 0
   startEndModifier:
     addPoints: 0
@@ -528,8 +528,8 @@ GameObject:
   - component: {fileID: 8336979071984448650}
   - component: {fileID: 8367778321836768221}
   - component: {fileID: 4801491479825156525}
-  - component: {fileID: 3139501737593835218}
   - component: {fileID: 7609396329837549051}
+  - component: {fileID: 886725428361670710}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -545,7 +545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2740178065396799164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.4, z: 0}
+  m_LocalPosition: {x: 0.1, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1789513762122585686}
@@ -616,18 +616,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashColor: {r: 1, g: 0, b: 0, a: 1}
   duration: 0.1
---- !u!114 &3139501737593835218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2740178065396799164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c9a20fb3169364f8cf277757b75e90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &7609396329837549051
 Animator:
   serializedVersion: 3
@@ -647,3 +635,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &886725428361670710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740178065396799164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca34396f21af7494fa69c51983ff6f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

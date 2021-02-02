@@ -587,10 +587,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3047856118875683606, guid: 5803bec90df70944b8eb7f4dbb0ecf40, type: 3}
-      propertyPath: pools.Array.data[2].initialCount
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 6471367975449683317, guid: 5803bec90df70944b8eb7f4dbb0ecf40, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -648,10 +644,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9145852432130418752, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
-      propertyPath: orthographic size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 9145852432130418754, guid: 51c21301d3cdd814cb6e4841c1633787, type: 3}
       propertyPath: m_Name
       value: GameCamera

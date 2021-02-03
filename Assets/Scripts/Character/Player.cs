@@ -1,7 +1,28 @@
 using UnityEngine;
+using System;
 
 [RequireComponent(typeof(Health))]
 public class Player : MonoBehaviourSingleton<Player>, ICharacter
 {
     public CharacterType CharacterType => CharacterType.Player;
+    public Action<Player> OnPlayerDead { get; set; }
+    private Health health;
+    protected override void Awake()
+    {
+        base.Awake();
+        health = GetComponent<Health>();
+    }
+    private void Start()
+    {
+        health.OnDead += Die;
+    }
+    private void Die()
+    {
+        OnPlayerDead?.Invoke(this);
+        gameObject.SetActive(false);
+    }
+    private void OnDestroy()
+    {
+        health.OnDead -= Die;
+    }
 }

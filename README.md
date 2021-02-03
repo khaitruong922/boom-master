@@ -39,3 +39,5 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 - [Sci-Fi Character Pack](https://penusbmic.itch.io/)
 
 - [Indoor Tileset](https://tilation.itch.io/16x16-small-indoor-tileset)
+
+- [2D Pixel Art Portal Sprites](https://elthen.itch.io/2d-pixel-art-portal-sprites)

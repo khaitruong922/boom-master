@@ -7,8 +7,8 @@ public class AstarSpriteFlipper : MonoBehaviour
     private AIPath aIPath;
     private bool isFlipped = false;
     [SerializeField] private float velocityToFlip = 0.2f;
-    private Vector3 normalScale = new Vector3(1, 1, 1);
-    private Vector3 flippedScale = new Vector3(-1, 1, 1);
+    private Quaternion normalQuaternion = Quaternion.Euler(0, 0, 0);
+    private Quaternion flippedQuaternion = Quaternion.Euler(0, 180, 0);
     private void Awake()
     {
         aIPath = GetComponentInParent<AIPath>();
@@ -17,14 +17,14 @@ public class AstarSpriteFlipper : MonoBehaviour
     {
         if (!isFlipped & aIPath.desiredVelocity.x < velocityToFlip)
         {
-            transform.localScale = flippedScale;
+            transform.rotation = flippedQuaternion;
             isFlipped = true;
             return;
 
         }
         if (isFlipped & aIPath.desiredVelocity.x > velocityToFlip)
         {
-            transform.localScale = normalScale;
+            transform.rotation = normalQuaternion;
             isFlipped = false;
             return;
         }

@@ -28,7 +28,7 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 
 ## Acknowledgement
 
-- Explosion effect from [Lunar Battle Pack](https://mattwalkden.itch.io/lunar-battle-pack)
+- [Lunar Battle Pack](https://mattwalkden.itch.io/lunar-battle-pack)
 
 - [RPG Nature Tileset - Seasons](https://stealthix.itch.io/rpg-nature-tileset)
 
@@ -36,6 +36,6 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 
 - [Lanitse assets : flames pack 1 (v0.1)](https://jiraton.itch.io/erana-iasana-assets-fxes-gunfire)
 
-- [Sci-Fi Character Pack 8](https://penusbmic.itch.io/sci-fi-character-pack-8)
+- [Sci-Fi Character Pack](https://penusbmic.itch.io/)
 
 - [Indoor Tileset](https://tilation.itch.io/16x16-small-indoor-tileset)

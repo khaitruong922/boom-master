@@ -180,7 +180,7 @@ MonoBehaviour:
   damage: 50
   length: 1
   lifetime: 2
-  bombLimit: 1
+  bombLimit: 2
 --- !u!114 &8700499237554862109
 MonoBehaviour:
   m_ObjectHideFlags: 0

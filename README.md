@@ -47,3 +47,5 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 - [2D Pixel Art Portal Sprites](https://elthen.itch.io/2d-pixel-art-portal-sprites)
 
 - [Dungeon Tileset](https://0x72.itch.io/16x16-dungeon-tileset)
+
+- [PixelHole's Overworld Tileset](https://pixelhole.itch.io/pixelholes-overworld-tileset)

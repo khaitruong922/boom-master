@@ -201,3 +201,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolObjectFactory:
     type: 3
+    color: {r: 0, g: 0.39888763, b: 1, a: 1}

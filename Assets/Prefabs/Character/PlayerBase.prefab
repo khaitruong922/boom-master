@@ -174,11 +174,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f8761d1a9875846a19069a8c3429ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 2
-  length: 2
-  damage: 20
   bombFactory:
     type: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+  damage: 50
+  length: 1
+  lifetime: 2
+  bombLimit: 1
 --- !u!114 &8700499237554862109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f04f84ecc668b14da6cfe9444f38bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 200
+  maxHP: 500
   onDamageTaken:
     m_PersistentCalls:
       m_Calls:

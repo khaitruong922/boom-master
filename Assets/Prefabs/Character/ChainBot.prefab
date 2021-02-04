@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombFactory:
     type: 1
+    color: {r: 1, g: 0, b: 0.29648542, a: 1}
   damage: 20
   length: 2
   lifetime: 2

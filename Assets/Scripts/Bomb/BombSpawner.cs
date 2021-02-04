@@ -8,6 +8,7 @@ public class BombSpawner : MonoBehaviour
     [SerializeField] private float damage = 20f;
     [SerializeField] private int length = 2;
     [SerializeField] private float lifetime = 2f;
+    [SerializeField] private int bombLimit = 999;
     private List<Vector2> bombPositions = new List<Vector2>();
     private CharacterType characterType;
     private void Awake()
@@ -16,6 +17,7 @@ public class BombSpawner : MonoBehaviour
     }
     public void PlaceBomb(Vector2 position)
     {
+        if (bombPositions.Count >= bombLimit) return;
         Vector2 cellCenterPos = position.ToCellCenter();
         if (bombPositions.Contains(cellCenterPos)) return;
         bombPositions.Add(cellCenterPos);

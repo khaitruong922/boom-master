@@ -6,10 +6,12 @@ using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    public Action OnHealthChanged { get; set; }
+    public static Action<float, Health> OnCharacterHealthChanged { get; set; }
+    public Action<float> OnHealthChanged { get; set; }
     public Action OnDead { get; set; }
     [SerializeField] private float maxHP = 200;
     [SerializeField] private UnityEvent<float> onDamageTaken;
+    [SerializeField] private UnityEvent<float> onHeal;
     private float currentHP;
     private void Awake()
     {
@@ -26,14 +28,16 @@ public class Health : MonoBehaviour
     {
         currentHP -= damage;
         ClampHP();
-        OnHealthChanged?.Invoke();
+        OnHealthChanged?.Invoke(-damage);
+        OnCharacterHealthChanged?.Invoke(-damage, this);
         onDamageTaken?.Invoke(damage);
     }
     public void Heal(float healAmount)
     {
         currentHP += healAmount;
         ClampHP();
-        OnHealthChanged?.Invoke();
+        OnHealthChanged?.Invoke(healAmount);
+        OnCharacterHealthChanged?.Invoke(healAmount, this);
     }
     private void ClampHP()
     {

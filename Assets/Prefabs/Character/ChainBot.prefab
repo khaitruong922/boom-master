@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7364453743498383856}
-  - component: {fileID: 2585715388003004367}
   - component: {fileID: 4248368152829341327}
   - component: {fileID: 3556138553549320351}
   - component: {fileID: 2622265582986366043}
@@ -34,19 +33,6 @@ Transform:
   m_Father: {fileID: 4805649484105154594}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2585715388003004367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2483611289930646929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1659bf05dc262874d923825735854eb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
 --- !u!114 &4248368152829341327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,9 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f8761d1a9875846a19069a8c3429ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 2
-  length: 2
+  bombFactory:
+    type: 1
   damage: 20
+  length: 2
+  lifetime: 2
 --- !u!114 &3556138553549320351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +100,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1567782627712710249, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1789513762122585683, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
       propertyPath: m_Name
       value: ChainBot

@@ -2,18 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vector2Extensions;
 
-[RequireComponent(typeof(PoolObjectFactory))]
 public class BombSpawner : MonoBehaviour
 {
-    [SerializeField] private float lifetime = 2f;
-    [SerializeField] private int length = 2;
+    [SerializeField] private PoolObjectFactory bombFactory;
     [SerializeField] private float damage = 20f;
-    private PoolObjectFactory bombFactory;
+    [SerializeField] private int length = 2;
+    [SerializeField] private float lifetime = 2f;
     private List<Vector2> bombPositions = new List<Vector2>();
     private CharacterType characterType;
     private void Awake()
     {
-        bombFactory = GetComponent<PoolObjectFactory>();
         characterType = GetComponentInParent<ICharacter>().CharacterType;
     }
     public void PlaceBomb(Vector2 position)

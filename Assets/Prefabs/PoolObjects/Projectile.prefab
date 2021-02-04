@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3681861600292616878}
   - component: {fileID: 3681861600292616864}
   - component: {fileID: 3681861600292616865}
-  - component: {fileID: 3797124107500202249}
   - component: {fileID: 3025835040318044995}
+  - component: {fileID: 8118011282890478499}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -163,10 +163,10 @@ MonoBehaviour:
   onCollision:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3797124107500202249}
-        m_TargetAssemblyTypeName: PoolObjectFactory, Assembly-CSharp
+      - m_Target: {fileID: 8118011282890478499}
+        m_TargetAssemblyTypeName: PoolObjectSpawner, Assembly-CSharp
         m_MethodName: Spawn
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -175,19 +175,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3797124107500202249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3681861600292616879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1659bf05dc262874d923825735854eb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 3
 --- !u!114 &3025835040318044995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,3 +187,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b66b3eb282e01e47817fac86b62cb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8118011282890478499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681861600292616879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec34887de218fba46814a492c8cc4a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolObjectFactory:
+    type: 3

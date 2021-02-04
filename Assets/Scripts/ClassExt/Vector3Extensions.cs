@@ -16,9 +16,5 @@ namespace Vector3Extensions
         {
             return new Vector3(Mathf.FloorToInt(v.x) + 0.5f, Mathf.FloorToInt(v.y) + 0.5f, Mathf.FloorToInt(v.z));
         }
-        public static Vector2 ToVector2(this Vector3 v)
-        {
-            return v;
-        }
     }
 }

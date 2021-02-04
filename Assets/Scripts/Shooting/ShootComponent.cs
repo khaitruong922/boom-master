@@ -1,16 +1,14 @@
 #pragma warning disable 0649
 
 using UnityEngine;
-[RequireComponent(typeof(PoolObjectFactory))]
 public class ShootComponent : MonoBehaviour
 {
+    [SerializeField] private PoolObjectFactory projectileFactory;
     [SerializeField] private float shootForce = 15;
     [SerializeField] private float damage = 15;
-    private PoolObjectFactory projectileFactory;
     private CharacterType characterType;
     private void Awake()
     {
-        projectileFactory = GetComponent<PoolObjectFactory>();
         characterType = GetComponentInParent<ICharacter>().CharacterType;
     }
     public void Shoot(Vector2 direction)

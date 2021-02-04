@@ -18,7 +18,7 @@ public class AnimationEndEvent : MonoBehaviour
     private IEnumerator InvokeAfterAnimationEnds()
     {
         yield return new WaitForEndOfFrame();
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - Time.deltaTime);
         onAnimationEnd?.Invoke();
     }
 }

@@ -38,7 +38,7 @@ public class AIBombThrower : MonoBehaviour
         Vector2 diffRight = diff.Rotate(90).normalized;
         for (int i = -bombCountPerSide; i <= bombCountPerSide; i++)
         {
-            ThrowBombTo((targetTransform.position.ToVector2() + diffRight * i).Extend(2));
+            ThrowBombTo(((Vector2)targetTransform.position + diffRight * i).Extend(2));
         }
     }
     private float RandomOffset => Random.Range(-radiusAroundTarget, radiusAroundTarget);

@@ -17,7 +17,7 @@ public class PlayerHealthBar : MonoBehaviour
         health = player.GetComponent<Health>();
         health.OnHealthChanged += UpdateHealthBar;
     }
-    private void UpdateHealthBar()
+    private void UpdateHealthBar(float changedAmount)
     {
         if (health == null) return;
         healthBar.fillAmount = health.Percentage;

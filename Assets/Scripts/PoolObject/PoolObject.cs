@@ -13,12 +13,3 @@ public class PoolObject : MonoBehaviour
         poolManager.ReturnToPool(Type, gameObject);
     }
 }
-
-public enum PoolObjectType
-{
-    Bomb,
-    BombThrow,
-    Explosion,
-    ExplosionVFX,
-    FlameBullet
-}

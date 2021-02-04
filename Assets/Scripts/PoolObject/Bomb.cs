@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(PoolObjectFactory))]
 public class Bomb : PoolObject
 {
+    [SerializeField] private PoolObjectFactory explosionFactory;
     [SerializeField] private LayerMask wallLayerMask;
     [SerializeField] private UnityEvent<Vector3> onExploded;
     private float lifetime = 2f;
@@ -13,13 +13,11 @@ public class Bomb : PoolObject
     public BombSpawner BombSpawner { get; set; }
     public int Length { get => length; set => length = value; }
     public float Lifetime { get => lifetime; set => lifetime = value; }
-    private PoolObjectFactory explosionFactory;
     private float timeElapsed = 0;
     private bool hasExploded = false;
     private Collider2D bombCollider;
     private void Awake()
     {
-        explosionFactory = GetComponent<PoolObjectFactory>();
         bombCollider = GetComponent<Collider2D>();
     }
     private void OnEnable()

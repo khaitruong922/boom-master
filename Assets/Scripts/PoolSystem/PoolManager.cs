@@ -51,6 +51,12 @@ public class PoolManager : MonoBehaviourSingleton<PoolManager>
         g.SetActive(true);
         return g;
     }
+    public GameObject Get(PoolObjectType type, Vector3 position, Quaternion quaternion, Transform parent)
+    {
+        GameObject g = Get(type, position, quaternion);
+        g.transform.parent = parent;
+        return g;
+    }
     public GameObject Get(PoolObjectType type, Vector3 position)
     {
         return Get(type, position, Quaternion.identity);
@@ -74,6 +80,7 @@ public class PoolManager : MonoBehaviourSingleton<PoolManager>
     public void ReturnToPool(PoolObjectType type, GameObject g)
     {
         g.SetActive(false);
+        g.transform.parent = poolDictionary[type].Container.transform;
         poolDictionary[type].Queue.Enqueue(g);
     }
 }

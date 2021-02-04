@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 4842365972409805058}
   - component: {fileID: 4842365972409805061}
   - component: {fileID: 4842365972409805057}
-  - component: {fileID: 4842365972409805056}
-  - component: {fileID: 4842365972409805059}
   - component: {fileID: 4842365973084480441}
   m_Layer: 0
   m_Name: Destructible
@@ -168,70 +166,10 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!50 &4842365972409805056
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4842365972409805063}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!66 &4842365972409805059
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4842365972409805063}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 4842365972409805057}
-    m_ColliderPaths:
-    - - X: 10000000
-        Y: -20000000
-      - X: 3125000
-        Y: -20000000
-      - X: 0
-        Y: -23125000
-      - X: 0
-        Y: -30000000
-      - X: 10000000
-        Y: -30000000
-  m_CompositePaths:
-    m_Paths:
-    - - {x: 0.99997073, y: -3}
-      - {x: 0.99997073, y: -2}
-      - {x: 0.3124924, y: -2.0000076}
-      - {x: 0, y: -2.3125107}
-      - {x: 0.000029300001, y: -3}
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
 --- !u!114 &4842365973084480441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1530,7 +1468,7 @@ GameObject:
   - component: {fileID: 6969618450069027060}
   - component: {fileID: 6969618450069027063}
   m_Layer: 0
-  m_Name: Level2Grid
+  m_Name: Level2Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,10 +12,6 @@ public class PoolObjectFactory
     {
         return PoolManager.Instance.Get(type, position, quaternion);
     }
-    public GameObject Get(Vector3 position, Quaternion quaternion, Transform parent)
-    {
-        return PoolManager.Instance.Get(type, position, quaternion, parent);
-    }
     public void Spawn(Vector3 position)
     {
         PoolManager.Instance.Get(type, position);

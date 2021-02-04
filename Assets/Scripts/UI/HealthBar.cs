@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    private Health health;
+    [Header("Optional - Auto GetComponentInParent")]
+    [SerializeField] private Health health;
     private Image healthBar;
     private void Awake()
     {

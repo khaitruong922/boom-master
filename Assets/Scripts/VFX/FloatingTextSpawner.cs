@@ -14,7 +14,8 @@ public class FloatingTextSpawner : MonoBehaviour
     }
     private void Spawn(float changedAmount, Health health)
     {
-        TextMeshPro floatingText = poolObjectFactory.Get(health.transform.position, Quaternion.identity, health.transform).GetComponent<TextMeshPro>();
+        TextMeshPro floatingText = poolObjectFactory.Get(health.transform.position, Quaternion.identity).GetComponent<TextMeshPro>();
+        floatingText.GetComponent<TransformAttach>().AttachTransform = health.transform;
         int displayAmount = (int)Mathf.Abs(changedAmount);
         floatingText.text = displayAmount.ToString();
         floatingText.color = changedAmount > 0 ? healColor : damageColor;

@@ -4,7 +4,6 @@ using UnityEngine;
 public class AstarGridUpdate : MonoBehaviour
 {
     private AstarPath astarPath;
-    private bool shouldUpdateNextFrame = false;
     private Vector2 graphUpdateBoundSize = new Vector2(3, 3);
     private void Awake()
     {

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7732262169160797685}
   - component: {fileID: 6280805688862406776}
   - component: {fileID: 1430856904665408041}
+  - component: {fileID: 1519306676397968799}
   m_Layer: 0
   m_Name: FloatingText
   m_TagString: Untagged
@@ -185,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fbe7d613dc18b4a8eb8d409f8b3315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomOffset: 1
 --- !u!95 &6280805688862406776
 Animator:
   serializedVersion: 3
@@ -231,3 +233,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1519306676397968799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732262169160797682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff47d571a1d92c43bec23ec0c615339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachTransform: {fileID: 0}

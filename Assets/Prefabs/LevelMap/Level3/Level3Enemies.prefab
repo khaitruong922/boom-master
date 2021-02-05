@@ -45,11 +45,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8798118926016866976, guid: b67f580289e8e09478e42373d6929861, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.66
+      value: 0.96
       objectReference: {fileID: 0}
     - target: {fileID: 8798118926016866976, guid: b67f580289e8e09478e42373d6929861, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.1
+      value: 8.24
       objectReference: {fileID: 0}
     - target: {fileID: 8798118926016866976, guid: b67f580289e8e09478e42373d6929861, type: 3}
       propertyPath: m_LocalPosition.z
@@ -87,6 +87,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal1
       objectReference: {fileID: 0}
+    - target: {fileID: 8798118926016867036, guid: b67f580289e8e09478e42373d6929861, type: 3}
+      propertyPath: cooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798118926016867038, guid: b67f580289e8e09478e42373d6929861, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 6293484126548640365, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b67f580289e8e09478e42373d6929861, type: 3}
 --- !u!4 &8798118924954453786 stripped

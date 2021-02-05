@@ -599,14 +599,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1701178755121190425, guid: 305571607774d2f48823c58419a5b862, type: 3}
-      propertyPath: cooldown
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1701178755121190427, guid: 305571607774d2f48823c58419a5b862, type: 3}
-      propertyPath: prefab
-      value: 
-      objectReference: {fileID: 4805649484105154599, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
     - target: {fileID: 4454464293745180351, guid: 305571607774d2f48823c58419a5b862, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -654,22 +646,6 @@ PrefabInstance:
     - target: {fileID: 8418809705222066945, guid: 305571607774d2f48823c58419a5b862, type: 3}
       propertyPath: m_Name
       value: Level3Enemies
-      objectReference: {fileID: 0}
-    - target: {fileID: 8798118924954453786, guid: 305571607774d2f48823c58419a5b862, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 8798118924954453786, guid: 305571607774d2f48823c58419a5b862, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 8798118924954453860, guid: 305571607774d2f48823c58419a5b862, type: 3}
-      propertyPath: prefab
-      value: 
-      objectReference: {fileID: 6293484126548640365, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
-    - target: {fileID: 8798118924954453862, guid: 305571607774d2f48823c58419a5b862, type: 3}
-      propertyPath: cooldown
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 305571607774d2f48823c58419a5b862, type: 3}

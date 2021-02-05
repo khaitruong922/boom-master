@@ -24,14 +24,15 @@ public class PauseMenu : MonoBehaviour
     }
     private void Pause()
     {
+        if (Time.timeScale == 0) return;
         isPausing = true;
         pauseLayer.SetActive(true);
-        Time.timeScale = 0f;
+        Time.timeScale = 0;
     }
     private void Resume()
     {
         isPausing = false;
         pauseLayer.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = 1;
     }
 }

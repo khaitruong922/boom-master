@@ -6,12 +6,13 @@ using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    public static Action<float, Health> OnCharacterHealthChanged { get; set; }
+    public static Action<float, Health> OnAnyCharacterHealthChanged { get; set; }
     public Action<float> OnHealthChanged { get; set; }
     public Action OnDead { get; set; }
     [SerializeField] private float maxHP = 200;
     [SerializeField] private UnityEvent<float> onDamageTaken;
     [SerializeField] private UnityEvent<float> onHeal;
+    private bool isDead = false;
     private float currentHP;
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class Health : MonoBehaviour
     }
     private void Update()
     {
+        if (isDead) return;
         if (currentHP <= 0)
         {
             Die();
@@ -29,7 +31,7 @@ public class Health : MonoBehaviour
         currentHP -= damage;
         ClampHP();
         OnHealthChanged?.Invoke(-damage);
-        OnCharacterHealthChanged?.Invoke(-damage, this);
+        OnAnyCharacterHealthChanged?.Invoke(-damage, this);
         onDamageTaken?.Invoke(damage);
     }
     public void Heal(float healAmount)
@@ -37,7 +39,7 @@ public class Health : MonoBehaviour
         currentHP += healAmount;
         ClampHP();
         OnHealthChanged?.Invoke(healAmount);
-        OnCharacterHealthChanged?.Invoke(healAmount, this);
+        OnAnyCharacterHealthChanged?.Invoke(healAmount, this);
     }
     private void ClampHP()
     {
@@ -45,6 +47,7 @@ public class Health : MonoBehaviour
     }
     private void Die()
     {
+        isDead = true;
         OnDead?.Invoke();
     }
     public float Percentage => currentHP / maxHP;

@@ -12,6 +12,7 @@ public class HealthBar : MonoBehaviour
     {
         healthBar = GetComponent<Image>();
         health = GetComponentInParent<Health>();
+        UpdateHealthBar(0);
     }
     private void Start()
     {
@@ -21,7 +22,6 @@ public class HealthBar : MonoBehaviour
     {
         if (health == null) return;
         healthBar.fillAmount = health.Percentage;
-
     }
     private void OnDestroy()
     {

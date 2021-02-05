@@ -14,7 +14,7 @@ public class SpriteFlipper : MonoBehaviour
     }
     private void Update()
     {
-        if (!isFlipped & rb.velocity.x < 0.1f)
+        if (!isFlipped & rb.velocity.x < -0.1f)
         {
             transform.rotation = flippedQuaternion;
             isFlipped = true;

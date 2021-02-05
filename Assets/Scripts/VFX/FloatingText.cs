@@ -11,5 +11,4 @@ public class FloatingText : PoolObject
         meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.sortingOrder = 100;
     }
-
 }

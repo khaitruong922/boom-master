@@ -16,12 +16,12 @@ public class PlayerHealthBar : MonoBehaviour
         if (player == null) return;
         health = player.GetComponent<Health>();
         health.OnHealthChanged += UpdateHealthBar;
+        UpdateHealthBar(0);
     }
     private void UpdateHealthBar(float changedAmount)
     {
         if (health == null) return;
         healthBar.fillAmount = health.Percentage;
-
     }
     private void OnDestroy()
     {

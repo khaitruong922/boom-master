@@ -15,7 +15,7 @@ public class AstarSpriteFlipper : MonoBehaviour
     }
     private void Update()
     {
-        if (!isFlipped & aIPath.desiredVelocity.x < velocityToFlip)
+        if (!isFlipped & aIPath.desiredVelocity.x < -velocityToFlip)
         {
             transform.rotation = flippedQuaternion;
             isFlipped = true;

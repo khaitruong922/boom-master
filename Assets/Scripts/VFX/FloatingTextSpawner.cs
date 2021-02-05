@@ -10,7 +10,7 @@ public class FloatingTextSpawner : MonoBehaviour
     [SerializeField] private Color healColor = Color.green;
     private void Start()
     {
-        Health.OnCharacterHealthChanged += Spawn;
+        Health.OnAnyCharacterHealthChanged += Spawn;
     }
     private void Spawn(float changedAmount, Health health)
     {
@@ -22,7 +22,7 @@ public class FloatingTextSpawner : MonoBehaviour
     }
     private void OnDestroy()
     {
-        Health.OnCharacterHealthChanged -= Spawn;
+        Health.OnAnyCharacterHealthChanged -= Spawn;
     }
 
 }

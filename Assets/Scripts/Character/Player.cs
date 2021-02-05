@@ -5,7 +5,7 @@ using System;
 public class Player : MonoBehaviourSingleton<Player>, ICharacter
 {
     public CharacterType CharacterType => CharacterType.Player;
-    public Action<Player> OnPlayerDead { get; set; }
+    public Action OnPlayerDead { get; set; }
     private Health health;
     protected override void Awake()
     {
@@ -18,7 +18,7 @@ public class Player : MonoBehaviourSingleton<Player>, ICharacter
     }
     private void Die()
     {
-        OnPlayerDead?.Invoke(this);
+        OnPlayerDead?.Invoke();
         gameObject.SetActive(false);
     }
     private void OnDestroy()

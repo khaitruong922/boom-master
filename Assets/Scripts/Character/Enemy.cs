@@ -4,9 +4,12 @@ using UnityEngine;
 [RequireComponent(typeof(Health))]
 public class Enemy : MonoBehaviour, ICharacter
 {
+    [SerializeField] private int score = 5;
+    public static Action<int> OnAnyEnemyKilled { get; set; }
     public CharacterType CharacterType => CharacterType.Enemy;
     private Health health;
-    private void Awake() {
+    private void Awake()
+    {
         health = GetComponent<Health>();
     }
     private void Start()
@@ -15,6 +18,7 @@ public class Enemy : MonoBehaviour, ICharacter
     }
     private void Die()
     {
+        OnAnyEnemyKilled?.Invoke(score);
         Destroy(gameObject);
     }
     private void OnDestroy()

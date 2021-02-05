@@ -11,6 +11,9 @@ public class BombSpawner : MonoBehaviour
     [SerializeField] private int bombLimit = 999;
     private List<Vector2> bombPositions = new List<Vector2>();
     private CharacterType characterType;
+    public float Damage { get => damage; set => damage = value; }
+    public int Length { get => length; set => length = value; }
+    public int BombLimit { get => bombLimit; set => bombLimit = value; }
     private void Awake()
     {
         characterType = GetComponentInParent<ICharacter>().CharacterType;

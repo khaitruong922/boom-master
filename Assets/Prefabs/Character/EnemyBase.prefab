@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 117015576}
   - component: {fileID: 117015575}
   - component: {fileID: 1451346398797694481}
+  - component: {fileID: 4940683082797571709}
   m_Layer: 8
   m_Name: EnemyBase
   m_TagString: Untagged
@@ -88,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263b2f9e7b0d15a48ae2be0d26d3a5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 5
 --- !u!114 &7809556171999213310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +121,21 @@ MonoBehaviour:
   onHeal:
     m_PersistentCalls:
       m_Calls: []
+  onDead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4940683082797571709}
+        m_TargetAssemblyTypeName: PickupSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &117015576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +212,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971bb88c0dffdfe49941b0a11e40e028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4940683082797571709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789513762122585683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fc016f1fbf0114dacd0eafafbc35e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupFactory: {fileID: 11400000, guid: dd6189441f624054abb2e5991c42dc8b, type: 2}
 --- !u!1 &2740178065396799164
 GameObject:
   m_ObjectHideFlags: 0

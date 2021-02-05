@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float maxHP = 200;
     [SerializeField] private UnityEvent<float> onDamageTaken;
     [SerializeField] private UnityEvent<float> onHeal;
+    [SerializeField] private UnityEvent onDead;
     private bool isDead = false;
     private float currentHP;
     private void Awake()
@@ -48,6 +49,7 @@ public class Health : MonoBehaviour
     private void Die()
     {
         isDead = true;
+        onDead?.Invoke();
         OnDead?.Invoke();
     }
     public float Percentage => currentHP / maxHP;

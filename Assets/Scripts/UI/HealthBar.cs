@@ -12,11 +12,11 @@ public class HealthBar : MonoBehaviour
     {
         healthBar = GetComponent<Image>();
         health = GetComponentInParent<Health>();
-        UpdateHealthBar(0);
     }
     private void Start()
     {
         health.OnHealthChanged += UpdateHealthBar;
+        UpdateHealthBar(0);
     }
     private void UpdateHealthBar(float changedAmount)
     {

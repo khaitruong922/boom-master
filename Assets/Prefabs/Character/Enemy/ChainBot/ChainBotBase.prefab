@@ -51,6 +51,7 @@ MonoBehaviour:
   damage: 20
   length: 2
   lifetime: 2
+  bombLimit: 999
 --- !u!114 &3556138553549320351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwSpeed: 20
-  radiusAroundTarget: 3
+  radiusAroundTarget: 2
 --- !u!114 &2622265582986366043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
+  cooldown: 2
   initialCooldown: 0
   onInterval:
     m_PersistentCalls:
@@ -107,7 +108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1789513762122585683, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
       propertyPath: m_Name
-      value: ChainBot
+      value: ChainBotBase
       objectReference: {fileID: 0}
     - target: {fileID: 1789513762122585686, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
       propertyPath: m_RootOrder

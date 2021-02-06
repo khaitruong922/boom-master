@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4805649484105154599, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: m_Name
-      value: ChainBotBase
+      value: ChainBot1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f574b712002927c48ad7a13f756d21ca, type: 3}

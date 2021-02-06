@@ -16,7 +16,7 @@ MonoBehaviour:
   - sceneName: Level1
     level: 1
     mapName: The Sandstorm
-    difficulty: 
+    difficulty: Easy
     description: 'Welcome to the desert
 
 '
@@ -24,19 +24,19 @@ MonoBehaviour:
   - sceneName: Level2
     level: 2
     mapName: World of Green
-    difficulty: 
+    difficulty: Medium
     description: Welcome to the village
     featuredImage: {fileID: 0}
   - sceneName: Level3
     level: 3
     mapName: The Death Maze
-    difficulty: 
+    difficulty: Hard
     description: Welcome to the house
     featuredImage: {fileID: 0}
   - sceneName: Level4
     level: 4
     mapName: The Conqueror Dungeon
-    difficulty: 
+    difficulty: Insane
     description: You are facing the most dangerous creatures in this land. Are you
       brave enough to conquer them?
     featuredImage: {fileID: 0}

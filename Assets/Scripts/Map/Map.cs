@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class Map
 {
+    [SerializeField] private string sceneName;
     [SerializeField] private int level;
     [SerializeField] private string mapName;
     [SerializeField] private string difficulty;

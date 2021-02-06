@@ -12,4 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc21844af37949b44a271de965f50eee, type: 3}
   m_Name: MapFactory
   m_EditorClassIdentifier: 
-  maps: []
+  maps:
+  - sceneName: Level1
+    level: 1
+    mapName: The Sandstorm
+    difficulty: 
+    description: 'Welcome to the desert
+
+'
+    featuredImage: {fileID: 0}
+  - sceneName: Level2
+    level: 2
+    mapName: World of Green
+    difficulty: 
+    description: Welcome to the village
+    featuredImage: {fileID: 0}
+  - sceneName: Level3
+    level: 3
+    mapName: The Death Maze
+    difficulty: 
+    description: Welcome to the house
+    featuredImage: {fileID: 0}
+  - sceneName: Level4
+    level: 4
+    mapName: The Conqueror Dungeon
+    difficulty: 
+    description: You are facing the most dangerous creatures in this land. Are you
+      brave enough to conquer them?
+    featuredImage: {fileID: 0}

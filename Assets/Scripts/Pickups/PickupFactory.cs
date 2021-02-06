@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = "PickupFactory")]
+[CreateAssetMenu(menuName = "PickupFactory",fileName="PickupFactory")]
 public class PickupFactory : ScriptableObject
 {
     [System.Serializable]

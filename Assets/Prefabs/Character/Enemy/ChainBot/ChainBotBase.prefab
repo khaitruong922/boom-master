@@ -105,6 +105,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 117015575, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
+      propertyPath: maxSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 117015575, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
+      propertyPath: slowdownDistance
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 117015575, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
+      propertyPath: endReachedDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1567782627712710249, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
       propertyPath: m_RootOrder
       value: 2

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6798108799573584605
+--- !u!1001 &694247851727113362
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,36 +8,44 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2622265582986366043, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
-      propertyPath: cooldown
-      value: 1.5
+      propertyPath: onInterval.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622265582986366043, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
+      propertyPath: onInterval.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ThrowBombsInArc
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622265582986366043, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
+      propertyPath: onInterval.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3334049087977074089, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.3018868
       objectReference: {fileID: 0}
     - target: {fileID: 3334049087977074089, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: m_Color.g
-      value: 0.89550054
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3334049087977074089, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.13478132
       objectReference: {fileID: 0}
     - target: {fileID: 3556138553549320351, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: throwSpeed
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 3556138553549320351, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
-      propertyPath: radiusAroundTarget
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3892697780046864522, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: maxHP
-      value: 300
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 4248368152829341327, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: damage
-      value: 25
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248368152829341327, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
+      propertyPath: length
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4805649484105154594, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: m_RootOrder
@@ -85,11 +93,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4805649484105154599, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: m_Name
-      value: ChainBot2
+      value: ChainBot5
       objectReference: {fileID: 0}
     - target: {fileID: 8112782514331370445, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: score
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f574b712002927c48ad7a13f756d21ca, type: 3}

@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3556138553549320351, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: throwSpeed
-      value: 40
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3892697780046864522, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: maxHP
@@ -33,7 +33,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4248368152829341327, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: damage
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4248368152829341327, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: length
@@ -89,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8112782514331370445, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: score
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f574b712002927c48ad7a13f756d21ca, type: 3}

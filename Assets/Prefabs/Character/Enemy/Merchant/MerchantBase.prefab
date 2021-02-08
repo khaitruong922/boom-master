@@ -48,8 +48,11 @@ MonoBehaviour:
   projectileFactory:
     type: 700
     color: {r: 1, g: 1, b: 1, a: 1}
-  shootForce: 25
-  damage: 10
+  explosionVFXFactory:
+    type: 600
+    color: {r: 1, g: 1, b: 1, a: 1}
+  shootForce: 15
+  damage: 20
 --- !u!114 &3111337584935162750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0346d77842981ab42ba2bb20bd7d8ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootRange: 30
 --- !u!114 &6603968292225559951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
+  cooldown: 3
   initialCooldown: 0
   onInterval:
     m_PersistentCalls:
@@ -82,7 +86,7 @@ MonoBehaviour:
       - m_Target: {fileID: 3111337584935162750}
         m_TargetAssemblyTypeName: AIShooter, Assembly-CSharp
         m_MethodName: Shoot
-        m_Mode: 1
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -98,6 +102,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 117015575, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
+      propertyPath: endReachedDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1789513762122585683, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
       propertyPath: m_Name
       value: MerchantBase

@@ -11,6 +11,7 @@ public class Projectile : PoolObject
     [SerializeField] private UnityEvent<Vector3> onCollision;
     public float Damage { get; set; }
     public CharacterType CharacterType { get; set; }
+    public PoolObjectFactory ExplosionVFXFactory { get; set; }
     private Rigidbody2D rb;
     private float timeElapsed = 0;
     private void Awake()
@@ -56,6 +57,7 @@ public class Projectile : PoolObject
     }
     private void DestroyProjectile()
     {
+        ExplosionVFXFactory?.Spawn(transform.position);
         ReturnToPool();
     }
     public void SetVelocity(Vector2 velocity)

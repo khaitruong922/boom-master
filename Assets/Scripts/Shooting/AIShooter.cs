@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(ShootComponent))]
 public class AIShooter : MonoBehaviour
 {
+    [SerializeField] private float shootRange = 30;
     private ShootComponent shootComponent;
     private Transform targetTransform;
 
@@ -14,9 +15,11 @@ public class AIShooter : MonoBehaviour
     {
         targetTransform = Player.Instance.transform;
     }
-    public void Shoot()
+    public void Shoot(float angleOffset = 0)
     {
-        Vector3 direction = (targetTransform.position - transform.position).normalized;
-        shootComponent.Shoot(direction);
+        Vector3 diff = targetTransform.position - transform.position;
+        if (diff.magnitude > shootRange) return;
+        Vector3 direction = diff.normalized;
+        shootComponent.Shoot(direction, angleOffset);
     }
 }

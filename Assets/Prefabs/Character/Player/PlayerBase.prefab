@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombFactory:
-    type: 200
+    type: 100
     color: {r: 0, g: 0.77614975, b: 1, a: 1}
   explosionFactory:
     type: 500

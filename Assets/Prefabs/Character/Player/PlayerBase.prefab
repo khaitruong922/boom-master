@@ -175,8 +175,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombFactory:
-    type: 0
-    color: {r: 1, g: 1, b: 1, a: 1}
+    type: 200
+    color: {r: 0, g: 0.77614975, b: 1, a: 1}
+  explosionFactory:
+    type: 500
+    color: {r: 0, g: 0.7764706, b: 1, a: 1}
   damage: 50
   length: 1
   lifetime: 2

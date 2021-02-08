@@ -3,7 +3,12 @@ using UnityEngine.Events;
 
 public class Bomb : PoolObject
 {
-    [SerializeField] private PoolObjectFactory explosionFactory;
+    private enum BombType
+    {
+        _4D,
+        _8D
+    }
+    [SerializeField] private BombType bombType = BombType._4D;
     [SerializeField] private LayerMask wallLayerMask;
     [SerializeField] private UnityEvent<Vector3> onExploded;
     private float lifetime = 2f;
@@ -13,8 +18,13 @@ public class Bomb : PoolObject
     public BombSpawner BombSpawner { get; set; }
     public int Length { get => length; set => length = value; }
     public float Lifetime { get => lifetime; set => lifetime = value; }
+    public PoolObjectFactory ExplosionFactory { get; set; }
     private float timeElapsed = 0;
     private bool hasExploded = false;
+    private static Vector2 upLeft = new Vector2(-1, 1);
+    private static Vector2 upRight = new Vector2(1, 1);
+    private static Vector2 downLeft = new Vector2(-1, -1);
+    private static Vector2 downRight = new Vector2(1, -1);
     private Collider2D bombCollider;
     private void Awake()
     {
@@ -39,6 +49,13 @@ public class Bomb : PoolObject
         CreateExplosions(Vector2.down);
         CreateExplosions(Vector2.left);
         CreateExplosions(Vector2.right);
+        if (bombType == BombType._8D)
+        {
+            CreateExplosions(upLeft);
+            CreateExplosions(upRight);
+            CreateExplosions(downLeft);
+            CreateExplosions(downRight);
+        }
         onExploded?.Invoke(transform.position);
         BombSpawner.RemoveBombPosition(transform.position);
         DestroyBomb();
@@ -62,7 +79,7 @@ public class Bomb : PoolObject
     }
     private void SpawnExplosion(Vector3 position)
     {
-        Explosion explosion = explosionFactory.Get(position).GetComponent<Explosion>();
+        Explosion explosion = ExplosionFactory.Get(position).GetComponent<Explosion>();
         explosion.CharacterType = CharacterType;
         explosion.Damage = Damage;
     }

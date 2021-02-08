@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolObjectFactory:
-    type: 5
+    type: 800
     color: {r: 1, g: 1, b: 1, a: 1}
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   healColor: {r: 0, g: 1, b: 0, a: 1}

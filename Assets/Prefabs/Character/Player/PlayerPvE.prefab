@@ -19,14 +19,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5594683676889654880, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
-      propertyPath: bombFactory.color.g
-      value: 0.77614975
-      objectReference: {fileID: 0}
-    - target: {fileID: 5594683676889654880, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
-      propertyPath: bombFactory.color.r
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6571031581736241178, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
       propertyPath: m_Name
       value: PlayerPvE
@@ -37,11 +29,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6571031581736241183, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6571031581736241183, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6571031581736241183, guid: c4994f905947f364c8484ac8f4dfb500, type: 3}
       propertyPath: m_LocalPosition.z

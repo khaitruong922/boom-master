@@ -5,6 +5,8 @@ public class PoolObjectFactory
 {
     [SerializeField] private PoolObjectType type;
     [SerializeField] private Color color = Color.white;
+    public Color Color { get => color; set => color = value; }
+
     public GameObject Get(Vector3 position, Quaternion quaternion)
     {
         GameObject g = PoolManager.Instance.Get(type, position, quaternion);

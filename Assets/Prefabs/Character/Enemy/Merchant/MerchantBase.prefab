@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileFactory:
-    type: 4
+    type: 700
     color: {r: 1, g: 1, b: 1, a: 1}
   shootForce: 25
   damage: 10

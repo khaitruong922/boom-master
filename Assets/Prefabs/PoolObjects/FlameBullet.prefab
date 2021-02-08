@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3025835040318044995}
   - component: {fileID: 8118011282890478499}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: FlameBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,5 +200,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolObjectFactory:
-    type: 3
+    type: 600
     color: {r: 0, g: 0.39888763, b: 1, a: 1}

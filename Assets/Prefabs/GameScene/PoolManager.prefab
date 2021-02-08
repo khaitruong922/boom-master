@@ -44,21 +44,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - type: 0
+  - type: 100
     prefab: {fileID: 3597680938602878935, guid: 864ce44b854d64c44a15d0060286d7a7, type: 3}
     initialCount: 10
-  - type: 1
+  - type: 200
+    prefab: {fileID: 2751671776239329179, guid: 6f976317a61bcd84482465c45d91376f, type: 3}
+    initialCount: 5
+  - type: 300
     prefab: {fileID: 4375058825171892405, guid: 4aa22ec8ce1185547b65d3e44499600c, type: 3}
     initialCount: 30
-  - type: 2
+  - type: 400
+    prefab: {fileID: 5618434340496773110, guid: 5c0812023c791434896c3dc3d1d1f10c, type: 3}
+    initialCount: 20
+  - type: 500
     prefab: {fileID: 5089533828170267476, guid: b527b8022d20bdf4ab91beedbffbef29, type: 3}
-    initialCount: 100
-  - type: 3
+    initialCount: 20
+  - type: 600
     prefab: {fileID: 1931719530011669292, guid: eeb97dfbabd57f9439c970b938311d14, type: 3}
     initialCount: 50
-  - type: 4
+  - type: 700
     prefab: {fileID: 3681861600292616879, guid: 0cb85a616405864469fc8c0b2e9131f2, type: 3}
-    initialCount: 20
-  - type: 5
-    prefab: {fileID: 7732262169160797682, guid: 346975441c9b1a847a8c8e0834d89127, type: 3}
     initialCount: 50
+  - type: 800
+    prefab: {fileID: 7732262169160797682, guid: 346975441c9b1a847a8c8e0834d89127, type: 3}
+    initialCount: 100
+  - type: 800
+    prefab: {fileID: 7732262169160797682, guid: 346975441c9b1a847a8c8e0834d89127, type: 3}
+    initialCount: 100

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour, ICharacter
 {
     [SerializeField] private int score = 5;
-    public static Action<int> OnAnyEnemyKilled { get; set; }
+    public static Action<int, Vector3> OnAnyEnemyKilled { get; set; }
     public CharacterType CharacterType => CharacterType.Enemy;
     private Health health;
     private void Awake()
@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour, ICharacter
     }
     private void Die()
     {
-        OnAnyEnemyKilled?.Invoke(score);
+        OnAnyEnemyKilled?.Invoke(score, transform.position);
         Destroy(gameObject);
     }
     private void OnDestroy()

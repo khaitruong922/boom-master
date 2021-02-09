@@ -25,7 +25,6 @@ public class PickupFactory : ScriptableObject
         {
             cumulativeWeight += pickupDrops[i].DropWeight;
             dropTable[i] = cumulativeWeight;
-            Debug.Log(cumulativeWeight);
         }
         if (cumulativeWeight > totalDropWeight) Debug.LogWarning($"Cumulative weight is higher than drop weight.");
     }

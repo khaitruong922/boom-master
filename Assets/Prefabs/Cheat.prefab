@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7009832944910472103}
   - component: {fileID: 7009832944910472100}
+  - component: {fileID: 5957772993088278766}
   - component: {fileID: 7009832944910472101}
   m_Layer: 0
   m_Name: Cheat
@@ -50,8 +51,37 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7009832944910472101}
-        m_TargetAssemblyTypeName: EnemyKiller, Assembly-CSharp
-        m_MethodName: KillAll
+        m_TargetAssemblyTypeName: Cheat, Assembly-CSharp
+        m_MethodName: KillAllEnemies
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5957772993088278766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7009832944910472098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73de4434f297cae4ba61697078f0f5fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeKey: 104
+  callableWhilePausing: 0
+  onKeyDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7009832944910472101}
+        m_TargetAssemblyTypeName: Cheat, Assembly-CSharp
+        m_MethodName: Heal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2622265582986366043, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
+      propertyPath: cooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622265582986366043, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: onInterval.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
       objectReference: {fileID: 0}
@@ -46,6 +50,22 @@ PrefabInstance:
     - target: {fileID: 4248368152829341327, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: length
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248368152829341327, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
+      propertyPath: bombPool.color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248368152829341327, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
+      propertyPath: bombPool.color.r
+      value: 0.38039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248368152829341327, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
+      propertyPath: explosionPool.color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248368152829341327, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
+      propertyPath: explosionPool.color.r
+      value: 0.38039216
       objectReference: {fileID: 0}
     - target: {fileID: 4805649484105154594, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: m_RootOrder

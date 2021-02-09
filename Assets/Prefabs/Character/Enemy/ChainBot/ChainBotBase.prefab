@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f8761d1a9875846a19069a8c3429ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombFactory:
+  bombPool:
     type: 300
-    color: {r: 1, g: 0, b: 0.29648542, a: 1}
-  explosionFactory:
+    color: {r: 1, g: 1, b: 1, a: 1}
+  explosionPool:
     type: 500
-    color: {r: 1, g: 0, b: 0, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
   damage: 20
   length: 2
   lifetime: 2

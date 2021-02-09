@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         Enemy.OnAnyEnemyKilled += IncreaseScore;
         Player.Instance.OnPlayerDead += Defeat;
     }
-    private void IncreaseScore(int score)
+    private void IncreaseScore(int score, Vector3 position)
     {
         if (!isPlaying) return;
         currentScore += score;

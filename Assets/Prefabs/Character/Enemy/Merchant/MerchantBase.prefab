@@ -51,7 +51,7 @@ MonoBehaviour:
   explosionVFXPool:
     type: 600
     color: {r: 1, g: 1, b: 1, a: 1}
-  shootForce: 15
+  shootForce: 10
   damage: 20
 --- !u!114 &3111337584935162750
 MonoBehaviour:

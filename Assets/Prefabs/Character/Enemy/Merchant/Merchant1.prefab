@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: shootForce
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6293484126548640360, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: m_RootOrder

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PoolObjectSpawner : MonoBehaviour
 {
-    [SerializeField] private PoolObjectFactory poolObjectFactory;
+    [SerializeField] private ObjectPool objectPool;
     public void Spawn()
     {
-        poolObjectFactory.Spawn(transform.position);
+        objectPool.Spawn(transform.position);
     }
 }

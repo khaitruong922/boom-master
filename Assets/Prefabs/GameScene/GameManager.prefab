@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba3283626d9d344095461b6bfcb1463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolObjectFactory:
+  floatingTextPool:
     type: 800
     color: {r: 1, g: 1, b: 1, a: 1}
   damageColor: {r: 1, g: 0, b: 0, a: 1}

@@ -18,7 +18,7 @@ public class Bomb : PoolObject
     public BombSpawner BombSpawner { get; set; }
     public int Length { get => length; set => length = value; }
     public float Lifetime { get => lifetime; set => lifetime = value; }
-    public PoolObjectFactory ExplosionFactory { get; set; }
+    public ObjectPool ExplosionPool { get; set; }
     private float timeElapsed = 0;
     private bool hasExploded = false;
     private static Vector2 upLeft = new Vector2(-1, 1);
@@ -79,7 +79,7 @@ public class Bomb : PoolObject
     }
     private void SpawnExplosion(Vector3 position)
     {
-        Explosion explosion = ExplosionFactory.Get(position).GetComponent<Explosion>();
+        Explosion explosion = ExplosionPool.Get(position).GetComponent<Explosion>();
         explosion.CharacterType = CharacterType;
         explosion.Damage = Damage;
     }

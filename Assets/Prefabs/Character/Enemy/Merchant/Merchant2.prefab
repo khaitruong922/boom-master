@@ -32,6 +32,26 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
+      propertyPath: projectilePool.color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
+      propertyPath: projectilePool.color.g
+      value: 0.9882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
+      propertyPath: projectilePool.color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
+      propertyPath: explosionVFXPool.color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
+      propertyPath: explosionVFXPool.color.g
+      value: 0.9882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: projectileFactory.color.b
       value: 0
       objectReference: {fileID: 0}

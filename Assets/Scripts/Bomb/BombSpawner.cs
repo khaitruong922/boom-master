@@ -4,8 +4,8 @@ using Vector2Extensions;
 
 public class BombSpawner : MonoBehaviour
 {
-    [SerializeField] private PoolObjectFactory bombFactory;
-    [SerializeField] private PoolObjectFactory explosionFactory;
+    [SerializeField] private ObjectPool bombPool;
+    [SerializeField] private ObjectPool explosionPool;
     [SerializeField] private float damage = 20f;
     [SerializeField] private int length = 2;
     [SerializeField] private float lifetime = 2f;
@@ -37,13 +37,13 @@ public class BombSpawner : MonoBehaviour
     }
     private Bomb CreateBomb(Vector2 position)
     {
-        Bomb b = bombFactory.Get(position).GetComponent<Bomb>();
+        Bomb b = bombPool.Get(position).GetComponent<Bomb>();
         b.BombSpawner = this;
         b.Damage = damage;
         b.Lifetime = lifetime;
         b.Length = length;
         b.CharacterType = characterType;
-        b.ExplosionFactory = explosionFactory;
+        b.ExplosionPool = explosionPool;
         return b;
     }
     private Bomb CreateBomb()

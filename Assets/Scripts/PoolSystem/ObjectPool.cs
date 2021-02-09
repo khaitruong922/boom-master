@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class PoolObjectFactory
+public class ObjectPool
 {
     [SerializeField] private PoolObjectType type;
     [SerializeField] private Color color = Color.white;

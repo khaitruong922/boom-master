@@ -5,7 +5,7 @@ using TMPro;
 
 public class FloatingTextSpawner : MonoBehaviour
 {
-    [SerializeField] private PoolObjectFactory poolObjectFactory;
+    [SerializeField] private ObjectPool floatingTextPool;
     [SerializeField] private Color damageColor = Color.red;
     [SerializeField] private Color healColor = Color.green;
     private void Start()
@@ -14,7 +14,7 @@ public class FloatingTextSpawner : MonoBehaviour
     }
     private void Spawn(float changedAmount, Health health)
     {
-        TextMeshPro floatingText = poolObjectFactory.Get(health.transform.position, Quaternion.identity).GetComponent<TextMeshPro>();
+        TextMeshPro floatingText = floatingTextPool.Get(health.transform.position, Quaternion.identity).GetComponent<TextMeshPro>();
         floatingText.GetComponent<TransformAttach>().AttachTransform = health.transform;
         int displayAmount = (int)Mathf.Abs(changedAmount);
         floatingText.text = displayAmount.ToString();

@@ -47,8 +47,11 @@ MonoBehaviour:
   floatingTextPool:
     type: 800
     color: {r: 1, g: 1, b: 1, a: 1}
+  healthFontSize: 4
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   healColor: {r: 0, g: 1, b: 0, a: 1}
+  scoreFontSize: 5
+  scoreColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &757047607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,4 +64,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5397390ce09484f9dcc8eda430f6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredScore: 200
+  requiredScore: 400

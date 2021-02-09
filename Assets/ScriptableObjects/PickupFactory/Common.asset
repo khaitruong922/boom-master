@@ -15,6 +15,6 @@ MonoBehaviour:
   totalDropWeight: 100
   pickupDrops:
   - pickup: {fileID: 8961682151195933490, guid: 169e7c728d4b75d45891495142cdabb1, type: 3}
-    dropWeight: 20
+    dropWeight: 15
   - pickup: {fileID: 4376621541234476214, guid: 06a3c37a19500d24bb26239b66357648, type: 3}
-    dropWeight: 20
+    dropWeight: 15

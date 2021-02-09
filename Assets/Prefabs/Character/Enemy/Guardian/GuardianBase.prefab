@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 8779892498040219652}
   - component: {fileID: 859029461588783414}
   - component: {fileID: 5713755432491748662}
+  - component: {fileID: 3716419047733979062}
   m_Layer: 0
   m_Name: GuardianBase
   m_TagString: Untagged
@@ -239,13 +240,50 @@ MonoBehaviour:
   maxHP: 1000
   onDamageTaken:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5808561249302064921}
+        m_TargetAssemblyTypeName: ColorFlash, Assembly-CSharp
+        m_MethodName: Flash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
   onDead:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3716419047733979062}
+        m_TargetAssemblyTypeName: PickupSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3716419047733979062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8414493905802130615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fc016f1fbf0114dacd0eafafbc35e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupFactory: {fileID: 11400000, guid: b332c9fc553c2814aaa86e1b0f496e94, type: 2}
 --- !u!1 &8414493906629164026
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +295,7 @@ GameObject:
   - component: {fileID: 8414493906629164023}
   - component: {fileID: 8414493906629164024}
   - component: {fileID: 8414493906629164025}
+  - component: {fileID: 5808561249302064921}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -348,6 +387,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5808561249302064921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8414493906629164026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5d464e509208b479359c7fa270b389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
+  duration: 0.2
 --- !u!1001 &2031199170215301015
 PrefabInstance:
   m_ObjectHideFlags: 0

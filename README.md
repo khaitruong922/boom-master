@@ -32,6 +32,8 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 
 ## Acknowledgement
 
+### Art
+
 - [Lunar Battle Pack](https://mattwalkden.itch.io/lunar-battle-pack)
 
 - [RPG Nature Tileset - Seasons](https://stealthix.itch.io/rpg-nature-tileset)
@@ -49,3 +51,7 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 - [Dungeon Tileset](https://0x72.itch.io/16x16-dungeon-tileset)
 
 - [PixelHole's Overworld Tileset](https://pixelhole.itch.io/pixelholes-overworld-tileset)
+
+### Audio
+
+- [Free Sound Effects - Mixkit](https://mixkit.co/free-sound-effects/)

@@ -22,9 +22,7 @@ Desktop
 
 ## Preview
 
-*screenshot / trailer here*
-
-![Screenshot](relative/path/to/screenshot.png)
+![Level 2](Screenshots/level2.png)
 
 ## Installation
 

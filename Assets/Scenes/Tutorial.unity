@@ -682,7 +682,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2561005845924418888, guid: 0ae44a9a3a3df2b4aa23bec331645189, type: 3}
       propertyPath: m_Name
-      value: Level1Map
+      value: TutorialMap
       objectReference: {fileID: 0}
     - target: {fileID: 2561005845924418890, guid: 0ae44a9a3a3df2b4aa23bec331645189, type: 3}
       propertyPath: m_RootOrder

@@ -11,6 +11,7 @@ public class Map
     [TextArea(3, 5)]
     [SerializeField] private string description;
     [SerializeField] private Sprite featuredImage;
+    public string SceneName => sceneName;
     public int Level => level;
     public string MapName => mapName;
     public string Difficulty => difficulty;

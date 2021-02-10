@@ -6,12 +6,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviourSingleton<GameManager>
 {
     [SerializeField] private int requiredScore = 200;
+    [SerializeField] private float endGameDelay = 2;
     public Action OnVictory { get; set; }
     public Action OnDefeat { get; set; }
     public Action OnScoreUpdated { get; set; }
     private int currentScore = 0;
     private bool isPlaying = true;
-    private float endGameDelay = 2;
 
     private void Start()
     {

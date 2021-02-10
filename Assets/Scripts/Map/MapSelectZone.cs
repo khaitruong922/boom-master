@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MapSelectZone : MonoBehaviour
 {
-    [SerializeField] private KeyCode selectKey = KeyCode.K;
+    [SerializeField] private KeyCode selectKey = KeyCode.E;
     [SerializeField] private string mapSceneName;
     private MapDisplay mapDisplay;
     private static string visitedMapSceneName;

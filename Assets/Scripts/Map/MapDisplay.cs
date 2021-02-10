@@ -18,7 +18,7 @@ public class MapDisplay : MonoBehaviourSingleton<MapDisplay>
     private bool isDisplaying = false;
     public bool IsDisplaying => isDisplaying;
     private string defaultLocation = "Lobby";
-    private string defaultTooltip = "Find an area to enter the battle";
+    private string defaultTooltip = "Let\'s find an area to battle";
     private void Start()
     {
         Time.timeScale = 1;

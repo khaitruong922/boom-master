@@ -617,6 +617,10 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.8117647
       objectReference: {fileID: 0}
+    - target: {fileID: 5729269535680065354, guid: 6ecdad9edeb3acb4fbf6cd17ba0d38e2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Lobby
+      objectReference: {fileID: 0}
     - target: {fileID: 7979539226295245701, guid: 6ecdad9edeb3acb4fbf6cd17ba0d38e2, type: 3}
       propertyPath: m_Name
       value: PauseMenu

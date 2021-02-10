@@ -13,8 +13,18 @@ public class MapDisplay : MonoBehaviourSingleton<MapDisplay>
     [SerializeField] private TextMeshProUGUI difficultyText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Image featuredImage;
+    [SerializeField] private TextMeshProUGUI locationText;
+    [SerializeField] private TextMeshProUGUI tooltipText;
     private bool isDisplaying = false;
     public bool IsDisplaying => isDisplaying;
+    private string defaultLocation = "Lobby";
+    private string defaultTooltip = "Find an area to enter the battle";
+    private void Start()
+    {
+        Time.timeScale = 1;
+        SetLocationTextToDefault();
+        SetTooltipTextToDefault();
+    }
     public void DisplayMap(string sceneName)
     {
         Map map = mapFactory.GetMap(sceneName);
@@ -38,5 +48,22 @@ public class MapDisplay : MonoBehaviourSingleton<MapDisplay>
         Time.timeScale = 1;
         isDisplaying = false;
         mapLayer.SetActive(false);
+    }
+    public void SetLocationText(string sceneName)
+    {
+        Map map = mapFactory.GetMap(sceneName);
+        locationText.text = string.Format("Level {0} - {1}", map.Level, map.MapName);
+    }
+    public void SetLocationTextToDefault()
+    {
+        locationText.text = defaultLocation;
+    }
+    public void SetTooltipText(string text)
+    {
+        tooltipText.text = text;
+    }
+    public void SetTooltipTextToDefault()
+    {
+        tooltipText.text = defaultTooltip;
     }
 }

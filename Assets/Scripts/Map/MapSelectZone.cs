@@ -14,11 +14,17 @@ public class MapSelectZone : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.GetComponent<Player>() == null) return;
         visitedMapSceneName = mapSceneName;
+        mapDisplay.SetTooltipText(string.Format("Press {0} to continue", selectKey.ToString()));
+        mapDisplay.SetLocationText(visitedMapSceneName);
     }
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (other.GetComponent<Player>() == null) return;
         visitedMapSceneName = null;
+        mapDisplay.SetLocationTextToDefault();
+        mapDisplay.SetTooltipTextToDefault();
     }
     private void Update()
     {

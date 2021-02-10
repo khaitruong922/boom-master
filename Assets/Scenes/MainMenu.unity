@@ -196,14 +196,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4795584133621947670, guid: d1569aa0ce7dd5c438299d23d1ecbc3e, type: 3}
-      propertyPath: m_fontSize
-      value: 96
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795584133621947670, guid: d1569aa0ce7dd5c438299d23d1ecbc3e, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 96
-      objectReference: {fileID: 0}
     - target: {fileID: 4795584133996975425, guid: d1569aa0ce7dd5c438299d23d1ecbc3e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -291,10 +283,6 @@ PrefabInstance:
     - target: {fileID: 4795584133996975429, guid: d1569aa0ce7dd5c438299d23d1ecbc3e, type: 3}
       propertyPath: m_Name
       value: MainMenuCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795584134806925053, guid: d1569aa0ce7dd5c438299d23d1ecbc3e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1569aa0ce7dd5c438299d23d1ecbc3e, type: 3}

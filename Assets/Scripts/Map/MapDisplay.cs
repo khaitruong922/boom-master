@@ -13,6 +13,8 @@ public class MapDisplay : MonoBehaviourSingleton<MapDisplay>
     [SerializeField] private TextMeshProUGUI difficultyText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Image featuredImage;
+    private bool isDisplaying = false;
+    public bool IsDisplaying => isDisplaying;
     public void DisplayMap(string sceneName)
     {
         Map map = mapFactory.GetMap(sceneName);
@@ -20,6 +22,8 @@ public class MapDisplay : MonoBehaviourSingleton<MapDisplay>
     }
     public void DisplayMap(Map map)
     {
+        Time.timeScale = 0;
+        isDisplaying = true;
         mapLayer.SetActive(true);
         levelText.text = string.Format("Level {0}", map.Level);
         mapNameText.text = map.MapName;
@@ -29,6 +33,8 @@ public class MapDisplay : MonoBehaviourSingleton<MapDisplay>
     }
     public void HideMap()
     {
+        Time.timeScale = 1;
+        isDisplaying = false;
         mapLayer.SetActive(false);
     }
 }

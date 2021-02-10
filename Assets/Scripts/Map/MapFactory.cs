@@ -15,6 +15,7 @@ public class MapFactory : ScriptableObject
     }
     public Map GetMap(string sceneName)
     {
+        if (sceneName == null) return null;
         if (mapDictionary.ContainsKey(sceneName)) return mapDictionary[sceneName];
         return null;
     }

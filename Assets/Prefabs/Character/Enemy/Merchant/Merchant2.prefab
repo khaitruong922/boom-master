@@ -25,11 +25,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: damage
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: shootForce
-      value: 15
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: projectilePool.color.b
@@ -121,7 +121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6603968292225559951, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: cooldown
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7309780282690077063, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: score

@@ -235,6 +235,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7708459772865987933, guid: bbdf8a3e68df21d4bb232b183fdf45ac, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7708459772865987933, guid: bbdf8a3e68df21d4bb232b183fdf45ac, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f920e7fa070c344498b451f1fd22e690, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbdf8a3e68df21d4bb232b183fdf45ac, type: 3}
 --- !u!1001 &167295232

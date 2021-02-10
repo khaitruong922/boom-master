@@ -74,7 +74,9 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_text
-    value: 
+    value: '
+
+'
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_isRightToLeft

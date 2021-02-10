@@ -2,14 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
+    [SerializeField] private Image guideBackground;
     [SerializeField] private TextMeshProUGUI guideText;
     [SerializeField] private GameObject enemyPrefab;
     private GameObject enemyClone;
+    private GameManager gameManager;
     private int stage = 0;
     private bool stageInProgress = false;
+    private void Start()
+    {
+        gameManager = GameManager.Instance;
+        gameManager.OnVictory += HideGuide;
+    }
+    private void OnDestroy()
+    {
+        gameManager.OnVictory -= HideGuide;
+    }
     private void Update()
     {
         if (stage == 0)
@@ -21,7 +33,7 @@ public class Tutorial : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
-                Proceed();
+                if (stageInProgress) Proceed();
             }
             return;
         }
@@ -30,11 +42,11 @@ public class Tutorial : MonoBehaviour
             if (!stageInProgress)
             {
                 stageInProgress = true;
-                guideText.text = "Press Space to place a bomb. The bomb will explode after a while.";
+                guideText.text = "Press Space to place a bomb.\nThe bomb will explode after a while.";
             }
             if (Input.GetKey(KeyCode.Space))
             {
-                Proceed();
+                if (stageInProgress) Proceed();
             }
             return;
         }
@@ -48,7 +60,7 @@ public class Tutorial : MonoBehaviour
             }
             if (enemyClone == null)
             {
-                Proceed();
+                if (stageInProgress) Proceed();
             }
             return;
         }
@@ -57,14 +69,17 @@ public class Tutorial : MonoBehaviour
             if (!stageInProgress)
             {
                 stageInProgress = true;
-                guideText.text = "You have finished the tutorial. Let's begin your journey";
-                enemyClone = Instantiate(enemyPrefab, transform.position, transform.rotation);
+                guideText.text = "You have finished the tutorial. Let's begin your journey.";
             }
         }
     }
     public void Proceed()
     {
-        stage++;
         stageInProgress = false;
+        stage++;
+    }
+    private void HideGuide()
+    {
+        guideBackground.gameObject.SetActive(false);
     }
 }

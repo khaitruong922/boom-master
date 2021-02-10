@@ -24,7 +24,9 @@ Desktop
 
 ![Level 2](Screenshots/level2.png)
 
-## Installation
+## Where to play?
+
+Play the game [here](https://itch.io/khaitruong922/boom-master)
 
 Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-template/)
 

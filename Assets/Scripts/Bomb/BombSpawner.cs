@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Vector2Extensions;
 
 public class BombSpawner : MonoBehaviour
@@ -10,6 +11,7 @@ public class BombSpawner : MonoBehaviour
     [SerializeField] private int length = 2;
     [SerializeField] private float lifetime = 2f;
     [SerializeField] private int bombLimit = 999;
+    [SerializeField] private UnityEvent onBombPlaced;
     private List<Vector2> bombPositions = new List<Vector2>();
     private CharacterType characterType;
     public float Damage { get => damage; set => damage = value; }
@@ -26,6 +28,7 @@ public class BombSpawner : MonoBehaviour
         if (bombPositions.Contains(cellCenterPos)) return;
         bombPositions.Add(cellCenterPos);
         CreateBomb(cellCenterPos);
+        onBombPlaced?.Invoke();
     }
     public void ThrowBomb(Vector2 destination, float throwSpeed)
     {

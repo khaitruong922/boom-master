@@ -51,6 +51,8 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 - [Dungeon Tileset](https://0x72.itch.io/16x16-dungeon-tileset)
 
 - [PixelHole's Overworld Tileset](https://pixelhole.itch.io/pixelholes-overworld-tileset)
+  
+- [Cartoon Explosion Wallpapers](https://wallpaperaccess.com/cartoon-explosion)
 
 ### Audio
 

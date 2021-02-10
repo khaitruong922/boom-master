@@ -44,7 +44,8 @@ public class Bomb : PoolObject
     {
         if (hasExploded) return;
         hasExploded = true;
-        SpawnExplosion(transform.position);
+        Explosion centerExplosion = GetExplosion(transform.position);
+        centerExplosion.GetComponent<AudioSource>()?.Play();
         CreateExplosions(Vector2.up);
         CreateExplosions(Vector2.down);
         CreateExplosions(Vector2.left);
@@ -79,9 +80,14 @@ public class Bomb : PoolObject
     }
     private void SpawnExplosion(Vector3 position)
     {
-        Explosion explosion = ExplosionPool.Get(position).GetComponent<Explosion>();
-        explosion.CharacterType = CharacterType;
-        explosion.Damage = Damage;
+        GetExplosion(position);
+    }
+    private Explosion GetExplosion(Vector3 position)
+    {
+        Explosion e = ExplosionPool.Get(position).GetComponent<Explosion>();
+        e.CharacterType = CharacterType;
+        e.Damage = Damage;
+        return e;
     }
     private void DestroyBomb()
     {

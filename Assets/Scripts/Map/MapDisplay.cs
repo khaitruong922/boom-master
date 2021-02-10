@@ -24,6 +24,7 @@ public class MapDisplay : MonoBehaviourSingleton<MapDisplay>
     {
         Time.timeScale = 0;
         isDisplaying = true;
+        PlayerPrefs.SetString(SceneLoader.levelKey, map.SceneName);
         mapLayer.SetActive(true);
         levelText.text = string.Format("Level {0}", map.Level);
         mapNameText.text = map.MapName;
@@ -33,6 +34,7 @@ public class MapDisplay : MonoBehaviourSingleton<MapDisplay>
     }
     public void HideMap()
     {
+        PlayerPrefs.SetString(SceneLoader.levelKey, "");
         Time.timeScale = 1;
         isDisplaying = false;
         mapLayer.SetActive(false);

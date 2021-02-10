@@ -20,7 +20,7 @@ MonoBehaviour:
     description: 'Welcome to the desert
 
 '
-    featuredImage: {fileID: 0}
+    featuredImage: {fileID: 21300000, guid: cea27c8b9d6fdfc4c8df61f741c9f0ae, type: 3}
   - sceneName: Level2
     level: 2
     mapName: World of Green

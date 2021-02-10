@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
+    public static string levelKey = "Level";
     public static void Load(int sceneNumber)
     {
         SceneManager.LoadScene(sceneNumber, LoadSceneMode.Single);
@@ -18,7 +19,7 @@ public class SceneLoader : MonoBehaviour
     }
     public static void LoadSelectedScene()
     {
-        string sceneName = PlayerPrefs.GetString("Level", "MainMenu");
+        string sceneName = PlayerPrefs.GetString(levelKey, "MainMenu");
         if (Application.CanStreamedLevelBeLoaded(sceneName))
         {
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);

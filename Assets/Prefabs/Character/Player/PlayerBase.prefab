@@ -182,7 +182,7 @@ MonoBehaviour:
     type: 500
     color: {r: 1, g: 1, b: 1, a: 1}
   damage: 50
-  length: 1
+  length: 2
   lifetime: 2
   bombLimit: 2
   onBombPlaced:

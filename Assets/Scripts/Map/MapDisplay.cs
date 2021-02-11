@@ -15,30 +15,45 @@ public class MapDisplay : MonoBehaviourSingleton<MapDisplay>
     [SerializeField] private Image featuredImage;
     [SerializeField] private TextMeshProUGUI locationText;
     [SerializeField] private TextMeshProUGUI tooltipText;
+    [SerializeField] private KeyCode displayKey = KeyCode.E;
+    [SerializeField] private string defaultTooltip = "Let\'s find a battle";
+    public KeyCode DisplayKey => displayKey;
+    public string VisitedMapSceneName { get; set; }
     private bool isDisplaying = false;
-    public bool IsDisplaying => isDisplaying;
     private string defaultLocation = "Lobby";
-    private string defaultTooltip = "Let\'s find an area to battle";
     private void Start()
     {
-        Time.timeScale = 1;
+        HideMap();
         SetLocationTextToDefault();
         SetTooltipTextToDefault();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(displayKey)) DisplayVisitedMap();
+    }
+    public void DisplayVisitedMap()
+    {
+        if (isDisplaying)
+        {
+            HideMap();
+        }
+        else
+        {
+            DisplayMap(VisitedMapSceneName);
+        }
     }
     public void DisplayMap(string sceneName)
     {
         Map map = mapFactory.GetMap(sceneName);
-        if (map != null) DisplayMap(map);
-    }
-    public void DisplayMap(Map map)
-    {
+        if (map == null) return;
         Time.timeScale = 0;
         isDisplaying = true;
-        PlayerPrefs.SetString(SceneLoader.levelKey, map.SceneName);
         mapLayer.SetActive(true);
+        PlayerPrefs.SetString(SceneLoader.levelKey, map.SceneName);
         levelText.text = string.Format("Level {0}", map.Level);
         mapNameText.text = map.MapName;
         difficultyText.text = map.Difficulty;
+        difficultyText.color = map.DifficultyColor;
         descriptionText.text = map.Description;
         featuredImage.sprite = map.FeaturedImage;
     }

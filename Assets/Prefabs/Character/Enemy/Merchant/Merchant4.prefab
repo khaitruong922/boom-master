@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
-  initialCooldown: 0.1
+  initialCooldown: 1.1
   onInterval:
     m_PersistentCalls:
       m_Calls:
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
-  initialCooldown: 0.2
+  initialCooldown: 1.2
   onInterval:
     m_PersistentCalls:
       m_Calls:
@@ -67,7 +67,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2585715753222693568, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: maxHP
-      value: 400
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 4297279833862041571, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: m_Color.b

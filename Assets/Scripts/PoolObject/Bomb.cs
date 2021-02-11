@@ -20,6 +20,7 @@ public class Bomb : PoolObject
     public float Lifetime { get => lifetime; set => lifetime = value; }
     public ObjectPool ExplosionPool { get; set; }
     private float timeElapsed = 0;
+    private bool selfExploded = false;
     private bool hasExploded = false;
     private static Vector2 upLeft = new Vector2(-1, 1);
     private static Vector2 upRight = new Vector2(1, 1);
@@ -32,20 +33,25 @@ public class Bomb : PoolObject
     }
     private void OnEnable()
     {
+        selfExploded = false;
         hasExploded = false;
         timeElapsed = 0;
     }
     private void Update()
     {
         timeElapsed += Time.deltaTime;
-        if (timeElapsed > lifetime) Explode();
+        if (timeElapsed > lifetime)
+        {
+            selfExploded = true;
+            Explode();
+        }
     }
     public void Explode()
     {
         if (hasExploded) return;
         hasExploded = true;
         Explosion centerExplosion = GetExplosion(transform.position);
-        centerExplosion.GetComponent<AudioSource>()?.Play();
+        if (selfExploded) centerExplosion.GetComponent<AudioSource>()?.Play();
         CreateExplosions(Vector2.up);
         CreateExplosions(Vector2.down);
         CreateExplosions(Vector2.left);

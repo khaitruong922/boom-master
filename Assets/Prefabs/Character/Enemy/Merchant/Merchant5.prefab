@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
-  initialCooldown: 0.1
+  initialCooldown: 1.1
   onInterval:
     m_PersistentCalls:
       m_Calls:
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
-  initialCooldown: 0.2
+  initialCooldown: 1.2
   onInterval:
     m_PersistentCalls:
       m_Calls:
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
-  initialCooldown: 0.3
+  initialCooldown: 1.3
   onInterval:
     m_PersistentCalls:
       m_Calls:
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
-  initialCooldown: 0.4
+  initialCooldown: 1.4
   onInterval:
     m_PersistentCalls:
       m_Calls:
@@ -125,7 +125,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2585715753222693568, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: maxHP
-      value: 500
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 3111337584935162750, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: shootRange

@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 3
-  initialCooldown: 0
+  initialCooldown: 1
   onInterval:
     m_PersistentCalls:
       m_Calls:

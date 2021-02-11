@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3892697780046864522, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: maxHP
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4248368152829341327, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: damage

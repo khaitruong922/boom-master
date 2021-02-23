@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2230527432320059401, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
+      propertyPath: pickupFactory
+      value: 
+      objectReference: {fileID: 11400000, guid: 3df65118a8d70734c87cee074ba322fd, type: 2}
     - target: {fileID: 2622265582986366043, guid: f574b712002927c48ad7a13f756d21ca, type: 3}
       propertyPath: cooldown
       value: 3

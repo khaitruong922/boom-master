@@ -123,6 +123,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 798129062318885443, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
+      propertyPath: pickupFactory
+      value: 
+      objectReference: {fileID: 11400000, guid: f7c77e621e8104345a38360454c73df1, type: 2}
     - target: {fileID: 2585715753222693568, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: maxHP
       value: 800

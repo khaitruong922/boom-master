@@ -112,6 +112,10 @@ PrefabInstance:
       propertyPath: score
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4940683082797571709, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
+      propertyPath: pickupFactory
+      value: 
+      objectReference: {fileID: 11400000, guid: dd6189441f624054abb2e5991c42dc8b, type: 2}
     - target: {fileID: 7609396329837549051, guid: 82d45c1cf78f2dc4c9fcfa5c05311a10, type: 3}
       propertyPath: m_Controller
       value: 

@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: rotateSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3716419047733979062, guid: 6744d20f561834041893c1e11ac63e15, type: 3}
+      propertyPath: pickupFactory
+      value: 
+      objectReference: {fileID: 11400000, guid: f7c77e621e8104345a38360454c73df1, type: 2}
     - target: {fileID: 3821189866127524321, guid: 6744d20f561834041893c1e11ac63e15, type: 3}
       propertyPath: damage
       value: 100

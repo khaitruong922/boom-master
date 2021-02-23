@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: score
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 3716419047733979062, guid: 6744d20f561834041893c1e11ac63e15, type: 3}
+      propertyPath: pickupFactory
+      value: 
+      objectReference: {fileID: 11400000, guid: b332c9fc553c2814aaa86e1b0f496e94, type: 2}
     - target: {fileID: 3821189866127524321, guid: 6744d20f561834041893c1e11ac63e15, type: 3}
       propertyPath: damage
       value: 40

@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fc016f1fbf0114dacd0eafafbc35e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupFactory: {fileID: 11400000, guid: dd6189441f624054abb2e5991c42dc8b, type: 2}
+  pickupFactory: {fileID: 11400000, guid: b54b918abab558c4f91f1c1d27ef7e30, type: 2}
 --- !u!1 &2740178065396799164
 GameObject:
   m_ObjectHideFlags: 0

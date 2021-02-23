@@ -46,7 +46,7 @@ public class Health : MonoBehaviour
     {
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
     }
-    private void Die()
+    public void Die()
     {
         isDead = true;
         onDead?.Invoke();

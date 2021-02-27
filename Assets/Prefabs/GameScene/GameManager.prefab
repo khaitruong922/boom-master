@@ -190,4 +190,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5397390ce09484f9dcc8eda430f6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredScore: 400
+  requiredScore: 325
+  endGameDelay: 2

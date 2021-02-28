@@ -1,10 +1,19 @@
 using UnityEngine;
+using System;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class MoveComponent : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2f;
-    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+    public Action OnMoveSpeedChanged { get; set; }
+    public float MoveSpeed
+    {
+        get => moveSpeed; set
+        {
+            moveSpeed = value;
+            OnMoveSpeedChanged?.Invoke();
+        }
+    }
     private Rigidbody2D rb;
     private void Awake()
     {

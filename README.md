@@ -56,6 +56,10 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 
 - [Bomb Sprite](https://steemit.com/pixelart/@loomy/pixel-art-items-i-am-using-in-my-current-project)
 
+- [Magical Items & Potions tileset](https://wilfryed.itch.io/magical-potions-items-tileset)
+
+- [16x16 RPG Icons - Pack 1 - Free Sample](https://www.deviantart.com/7soul1/art/16x16-RPG-Icons-Pack-1-Free-Sample-467188465)
+
 ### Audio
 
 - [Free Sound Effects - Mixkit](https://mixkit.co/free-sound-effects/)

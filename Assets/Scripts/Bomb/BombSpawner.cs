@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Vector2Extensions;
+using System;
 
 public class BombSpawner : MonoBehaviour
 {
@@ -12,11 +13,35 @@ public class BombSpawner : MonoBehaviour
     [SerializeField] private float lifetime = 2f;
     [SerializeField] private int bombLimit = 999;
     [SerializeField] private UnityEvent onBombPlaced;
+    public Action OnDamageChanged { get; set; }
+    public Action OnLengthChanged { get; set; }
+    public Action OnBombLimitChanged { get; set; }
     private List<Vector2> bombPositions = new List<Vector2>();
     private CharacterType characterType;
-    public float Damage { get => damage; set => damage = value; }
-    public int Length { get => length; set => length = value; }
-    public int BombLimit { get => bombLimit; set => bombLimit = value; }
+    public float Damage
+    {
+        get => damage; set
+        {
+            damage = value;
+            OnDamageChanged?.Invoke();
+        }
+    }
+    public int Length
+    {
+        get => length; set
+        {
+            length = value;
+            OnLengthChanged?.Invoke();
+        }
+    }
+    public int BombLimit
+    {
+        get => bombLimit; set
+        {
+            bombLimit = value;
+            OnBombLimitChanged?.Invoke();
+        }
+    }
     private void Awake()
     {
         characterType = GetComponentInParent<ICharacter>().CharacterType;

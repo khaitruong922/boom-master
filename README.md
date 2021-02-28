@@ -54,6 +54,8 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
   
 - [Cartoon Explosion Wallpapers](https://wallpaperaccess.com/cartoon-explosion)
 
+- [Bomb Sprite](https://steemit.com/pixelart/@loomy/pixel-art-items-i-am-using-in-my-current-project)
+
 ### Audio
 
 - [Free Sound Effects - Mixkit](https://mixkit.co/free-sound-effects/)

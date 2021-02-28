@@ -4,6 +4,7 @@ using UnityEngine;
 public class MoveComponent : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2f;
+    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
     private Rigidbody2D rb;
     private void Awake()
     {
@@ -19,6 +20,6 @@ public class MoveComponent : MonoBehaviour
     }
     public void MoveAwayFrom(Vector2 destination)
     {
-        rb.MovePosition(Vector2.MoveTowards(rb.position, destination, - moveSpeed * Time.deltaTime));
+        rb.MovePosition(Vector2.MoveTowards(rb.position, destination, -moveSpeed * Time.deltaTime));
     }
 }

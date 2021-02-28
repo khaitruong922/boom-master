@@ -60,6 +60,10 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 
 - [16x16 RPG Icons - Pack 1 - Free Sample](https://www.deviantart.com/7soul1/art/16x16-RPG-Icons-Pack-1-Free-Sample-467188465)
 
+### Fonts
+
+- [1001 Fonts - Pixel Fonts](https://www.1001fonts.com/pixel-fonts.html)
+
 ### Audio
 
 - [Free Sound Effects - Mixkit](https://mixkit.co/free-sound-effects/)

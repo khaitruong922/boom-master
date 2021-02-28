@@ -614,6 +614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuideBackground
       objectReference: {fileID: 0}
+    - target: {fileID: 4477727796928124546, guid: aeb7484866ed7cb419ecfbfad3c6fe43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4477727796928124547, guid: aeb7484866ed7cb419ecfbfad3c6fe43, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -624,7 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4477727796928124547, guid: aeb7484866ed7cb419ecfbfad3c6fe43, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4477727796928124547, guid: aeb7484866ed7cb419ecfbfad3c6fe43, type: 3}
       propertyPath: m_AnchorMax.x
@@ -698,6 +702,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4477727797338509811, guid: aeb7484866ed7cb419ecfbfad3c6fe43, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477727797338509811, guid: aeb7484866ed7cb419ecfbfad3c6fe43, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 9abda82df5c481e46a81b34a88c4528b, type: 2}
+    - target: {fileID: 4477727797338509811, guid: aeb7484866ed7cb419ecfbfad3c6fe43, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -494068505848422388, guid: 9abda82df5c481e46a81b34a88c4528b, type: 2}
+    - target: {fileID: 4477727797338509811, guid: aeb7484866ed7cb419ecfbfad3c6fe43, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4288872192
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeb7484866ed7cb419ecfbfad3c6fe43, type: 3}
 --- !u!1001 &4764574901707312385
@@ -707,6 +727,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 270253325472981092, guid: e75ca281a24e40e42b318be851d0992d, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787858375027844896, guid: e75ca281a24e40e42b318be851d0992d, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3216184792117045388, guid: e75ca281a24e40e42b318be851d0992d, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4764574903035461243, guid: e75ca281a24e40e42b318be851d0992d, type: 3}
       propertyPath: m_Name
       value: GameCanvas
@@ -794,6 +826,10 @@ PrefabInstance:
     - target: {fileID: 4764574903035461247, guid: e75ca281a24e40e42b318be851d0992d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673102202258235235, guid: e75ca281a24e40e42b318be851d0992d, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e75ca281a24e40e42b318be851d0992d, type: 3}

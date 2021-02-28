@@ -4,7 +4,7 @@ This project is created from [template](https://github.com/khaitruong922/unity-2
 
 ## Description
 
-*Your game description*
+Blow up all the enemies in the way and save the world!
 
 ## Platform
 
@@ -16,13 +16,19 @@ Desktop
 
 ## Contributors
 
-- Khai Truong - [khaitruong922](https://github.com/khaitruong922)
+- Khai Truong - [khaitruong922](https://github.com/khaitruong922) - Game Developer
 
-- Thong Thanh Vo - [vothanhthong](https://github.com/vothanhthong)
+- Thong Thanh Vo - [vothanhthong](https://github.com/vothanhthong) - Game Designer
 
 ## Preview
 
+![Level 1](Screenshots/level1.png)
+
 ![Level 2](Screenshots/level2.png)
+
+![Lobby](Screenshots/lobby.png)
+
+![Map Selection](Screenshots/mapselect.png)
 
 ## Where to play?
 

@@ -73,3 +73,5 @@ Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-templ
 ### Audio
 
 - [Free Sound Effects - Mixkit](https://mixkit.co/free-sound-effects/)
+
+- [Desert Travel Inspired Instrumental Music](https://youtu.be/Sc40MyNNvhY)

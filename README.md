@@ -22,13 +22,22 @@ Desktop
 
 ## Preview
 
-![Level 1](Screenshots/level1.png)
+|![Level 1](Screenshots/level1.png)|
+|:--:| 
+| *Level 1* |
 
+|![Level 2](Screenshots/level2.png)|
+|:--:| 
+| *Level 2* |
 ![Level 2](Screenshots/level2.png)
 
-![Lobby](Screenshots/lobby.png)
+|![Lobby](Screenshots/lobby.png)|
+|:--:| 
+| *Lobby* |
 
-![Map Selection](Screenshots/mapselect.png)
+|![Map Selection](Screenshots/mapselect.png)|
+|:--:| 
+| *Map Selection* |
 
 ## Where to play?
 

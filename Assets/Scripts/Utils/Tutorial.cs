@@ -11,6 +11,7 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     private GameObject enemyClone;
     private GameManager gameManager;
+    private bool isProceeding = false;
     private int stage = 0;
     private bool stageInProgress = false;
     private void Start()
@@ -24,6 +25,7 @@ public class Tutorial : MonoBehaviour
     }
     private void Update()
     {
+        if (isProceeding) return;
         if (stage == 0)
         {
             if (!stageInProgress)
@@ -75,8 +77,15 @@ public class Tutorial : MonoBehaviour
     }
     public void Proceed()
     {
+        StartCoroutine(Proceeding());
+    }
+    private IEnumerator Proceeding()
+    {
+        isProceeding = true;
         stageInProgress = false;
         stage++;
+        yield return new WaitForSeconds(2);
+        isProceeding = false;
     }
     private void HideGuide()
     {

@@ -29,7 +29,6 @@ Desktop
 |![Level 2](Screenshots/level2.png)|
 |:--:| 
 | *Level 2* |
-![Level 2](Screenshots/level2.png)
 
 |![Lobby](Screenshots/lobby.png)|
 |:--:| 

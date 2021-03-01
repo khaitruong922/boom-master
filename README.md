@@ -42,8 +42,6 @@ Desktop
 
 Play the game [here](https://khaitruong922.itch.io/boom-master)
 
-Download the game [here](https://github.com/khaitruong922/unity-2d-desktop-template/)
-
 ## Acknowledgement
 
 ### Art

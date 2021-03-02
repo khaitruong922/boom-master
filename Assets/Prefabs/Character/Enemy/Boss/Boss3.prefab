@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
-  initialCooldown: 2.05
+  initialCooldown: 2.2
   onInterval:
     m_PersistentCalls:
       m_Calls:
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
-  initialCooldown: 2.15
+  initialCooldown: 2.3
   onInterval:
     m_PersistentCalls:
       m_Calls:
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
-  initialCooldown: 2.2
+  initialCooldown: 2.4
   onInterval:
     m_PersistentCalls:
       m_Calls:
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
+  cooldown: 5
   initialCooldown: 0
   onInterval:
     m_PersistentCalls:

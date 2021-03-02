@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 2
-  visibleObjects:
+  invisibleObjects:
   - {fileID: 1040339634191589918}
   - {fileID: 7408144646514771884}
 --- !u!114 &4525330370965697255

@@ -112,6 +112,18 @@ PrefabInstance:
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1487461282254561353, guid: d29510ffa6e494340a0a7b81f4de201e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.43137258
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487461282254561353, guid: d29510ffa6e494340a0a7b81f4de201e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487461282254561353, guid: d29510ffa6e494340a0a7b81f4de201e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.21568629
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29510ffa6e494340a0a7b81f4de201e, type: 3}
 --- !u!1 &347059498510044153 stripped

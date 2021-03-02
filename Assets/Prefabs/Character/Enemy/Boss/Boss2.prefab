@@ -1,63 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &8733888703767352507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7673494222681600979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 2
-  initialCooldown: 2.1
-  onInterval:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4213249037362723719}
-        m_TargetAssemblyTypeName: AIShooter, Assembly-CSharp
-        m_MethodName: Shoot
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8839104000905437705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7673494222681600979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 2
-  initialCooldown: 2.2
-  onInterval:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4213249037362723719}
-        m_TargetAssemblyTypeName: AIShooter, Assembly-CSharp
-        m_MethodName: Shoot
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2237805244799670205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.75
+  cooldown: 0.8
   initialCooldown: 0
   onInterval:
     m_PersistentCalls:
@@ -99,7 +41,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1.25
+  cooldown: 1.5
   initialCooldown: 2
   onInterval:
     m_PersistentCalls:
@@ -128,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 5
+  cooldown: 6
   initialCooldown: 0
   onInterval:
     m_PersistentCalls:
@@ -155,6 +97,14 @@ PrefabInstance:
     - target: {fileID: 2370638886058168193, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: dashSpeed
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522165805866766492, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: damage
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522165805866766492, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: length
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2522165805866766492, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: bombPool.color.g
@@ -236,6 +186,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.63529414
       objectReference: {fileID: 0}
+    - target: {fileID: 3619295847703031738, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: cooldown
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619295847703031738, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: onInterval.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3852309921153940342, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: duration
       value: 3
@@ -272,9 +230,13 @@ PrefabInstance:
       propertyPath: cooldown
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4751317055807113136, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: duration
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4906122013401940572, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: maxHP
-      value: 4000
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 6653861744286338943, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: m_Color.b
@@ -290,22 +252,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
---- !u!1 &7673494222681600979 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4690513338974351, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-  m_PrefabInstance: {fileID: 7668807360501035868}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4213249037362723719 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5770628469978450139, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-  m_PrefabInstance: {fileID: 7668807360501035868}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7673494222681600979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0346d77842981ab42ba2bb20bd7d8ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6240883694048513924 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4391292274422234328, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}

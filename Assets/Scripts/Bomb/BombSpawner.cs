@@ -58,10 +58,9 @@ public class BombSpawner : MonoBehaviour
     public void ThrowBomb(Vector2 destination, float throwSpeed)
     {
         Bomb b = CreateBomb();
-        MoveTowardPosition moveTowardPosition = b.gameObject.GetComponent<MoveTowardPosition>();
         Vector2 cellCenterPos = destination.ToCellCenter();
-        moveTowardPosition.TargetPosition = cellCenterPos;
-        moveTowardPosition.Speed = throwSpeed;
+        b.Destination = cellCenterPos;
+        b.Speed = throwSpeed;
     }
     private Bomb CreateBomb(Vector2 position)
     {

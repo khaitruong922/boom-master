@@ -1,23 +1,110 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &196433058284159701
+--- !u!114 &8733888703767352507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338221983541776278}
+  m_GameObject: {fileID: 7673494222681600979}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
+  initialCooldown: 2.1
+  onInterval:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4213249037362723719}
+        m_TargetAssemblyTypeName: AIShooter, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8839104000905437705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673494222681600979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 2
+  initialCooldown: 2.05
+  onInterval:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4213249037362723719}
+        m_TargetAssemblyTypeName: AIShooter, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2237805244799670205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6240883694048513924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0.75
+  initialCooldown: 0
+  onInterval:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4197663721887673635}
+        m_TargetAssemblyTypeName: AIBombThrower, Assembly-CSharp
+        m_MethodName: PlaceBomb
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3951528207346461852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6240883694048513924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 1.25
   initialCooldown: 2
   onInterval:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7524548881919438129}
+      - m_Target: {fileID: 4197663721887673635}
         m_TargetAssemblyTypeName: AIBombThrower, Assembly-CSharp
         m_MethodName: ThrowBombAroundTarget
         m_Mode: 4
@@ -29,98 +116,69 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2485662724580837818
+--- !u!114 &6053257385082211131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338221983541776278}
+  m_GameObject: {fileID: 6240883694048513924}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 1
-  initialCooldown: 1
+  initialCooldown: 0
   onInterval:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1963589758679884754}
-        m_TargetAssemblyTypeName: BombSpawner, Assembly-CSharp
-        m_MethodName: PlaceBomb
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8748881625938604458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338221983541776278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 5
-  initialCooldown: 5
-  onInterval:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7524548881919438129}
+      - m_Target: {fileID: 4197663721887673635}
         m_TargetAssemblyTypeName: AIBombThrower, Assembly-CSharp
         m_MethodName: ThrowBombsInArc
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1001 &4053409077905519438
+--- !u!1001 &7668807360501035868
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2102125869267830511, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522165805866766492, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-      propertyPath: damage
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522165805866766492, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-      propertyPath: bombPool.color.b
-      value: 0
+    - target: {fileID: 2370638886058168193, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: dashSpeed
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2522165805866766492, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: bombPool.color.g
-      value: 0.64705884
+      value: 0.10980392
       objectReference: {fileID: 0}
     - target: {fileID: 2522165805866766492, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-      propertyPath: explosionPool.color.b
-      value: 0
+      propertyPath: bombPool.color.r
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2522165805866766492, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: explosionPool.color.g
-      value: 0.64705884
+      value: 0.10980392
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522165805866766492, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: explosionPool.color.r
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915823524843974837, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: maxSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3504564967481910001, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: m_Name
-      value: Boss1
+      value: Boss2
       objectReference: {fileID: 0}
     - target: {fileID: 3504564967481910004, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: m_RootOrder
@@ -168,84 +226,97 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3594974017366077902, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.8470589
       objectReference: {fileID: 0}
     - target: {fileID: 3594974017366077902, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: m_Color.g
-      value: 0.64705884
+      value: 0.10980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594974017366077902, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.63529414
+      objectReference: {fileID: 0}
+    - target: {fileID: 3852309921153940342, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: duration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478957513915249502, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: initialCooldown
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4528588644145271969, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-      propertyPath: projectilePool.color.b
-      value: 0
+      propertyPath: damage
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4528588644145271969, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: shootForce
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4528588644145271969, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: projectilePool.color.g
-      value: 0.64705884
+      value: 0.10980392
       objectReference: {fileID: 0}
     - target: {fileID: 4528588644145271969, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-      propertyPath: explosionVFXPool.color.b
-      value: 0
+      propertyPath: projectilePool.color.r
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4528588644145271969, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: explosionVFXPool.color.g
-      value: 0.64705884
+      value: 0.10980392
       objectReference: {fileID: 0}
-    - target: {fileID: 5425181962945390631, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-      propertyPath: bombPool.color.b
-      value: 0
+    - target: {fileID: 4528588644145271969, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: explosionVFXPool.color.r
+      value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 5425181962945390631, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-      propertyPath: bombPool.color.g
-      value: 0.64705884
+    - target: {fileID: 4555718882048515322, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: cooldown
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 5425181962945390631, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-      propertyPath: explosionPool.color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5425181962945390631, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-      propertyPath: explosionPool.color.g
-      value: 0.64705884
-      objectReference: {fileID: 0}
-    - target: {fileID: 5777004808564645503, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-      propertyPath: throwSpeed
-      value: 25
+    - target: {fileID: 4906122013401940572, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+      propertyPath: maxHP
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 6653861744286338943, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6653861744286338943, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: m_Color.g
-      value: 0.64744824
+      value: 0.10849059
       objectReference: {fileID: 0}
     - target: {fileID: 6653861744286338943, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.79933435
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
---- !u!1 &338221983541776278 stripped
+--- !u!1 &7673494222681600979 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4391292274422234328, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-  m_PrefabInstance: {fileID: 4053409077905519438}
+  m_CorrespondingSourceObject: {fileID: 4690513338974351, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+  m_PrefabInstance: {fileID: 7668807360501035868}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1963589758679884754 stripped
+--- !u!114 &4213249037362723719 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2522165805866766492, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-  m_PrefabInstance: {fileID: 4053409077905519438}
+  m_CorrespondingSourceObject: {fileID: 5770628469978450139, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+  m_PrefabInstance: {fileID: 7668807360501035868}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338221983541776278}
+  m_GameObject: {fileID: 7673494222681600979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08f8761d1a9875846a19069a8c3429ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 0346d77842981ab42ba2bb20bd7d8ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7524548881919438129 stripped
+--- !u!1 &6240883694048513924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4391292274422234328, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+  m_PrefabInstance: {fileID: 7668807360501035868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4197663721887673635 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5777004808564645503, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
-  m_PrefabInstance: {fileID: 4053409077905519438}
+  m_PrefabInstance: {fileID: 7668807360501035868}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338221983541776278}
+  m_GameObject: {fileID: 6240883694048513924}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1474cd48dd24af64ea542bb3da96e347, type: 3}

@@ -26,13 +26,11 @@ public class Bomb : PoolObject
     private static Vector2 upRight = new Vector2(1, 1);
     private static Vector2 downLeft = new Vector2(-1, -1);
     private static Vector2 downRight = new Vector2(1, -1);
-    private Collider2D bombCollider;
-    private void Awake()
-    {
-        bombCollider = GetComponent<Collider2D>();
-    }
+    public Vector2? Destination { get; set; }
+    public float Speed { get; set; }
     private void OnEnable()
     {
+        Destination = null;
         selfExploded = false;
         hasExploded = false;
         timeElapsed = 0;
@@ -45,6 +43,12 @@ public class Bomb : PoolObject
             selfExploded = true;
             Explode();
         }
+    }
+    private void FixedUpdate()
+    {
+        if (Destination == null) return;
+        transform.position = Vector2.MoveTowards(transform.position, (Vector2)Destination, Speed * Time.deltaTime);
+        if (Vector2.Distance(transform.position, (Vector2)Destination) == 0) Destination = null;
     }
     public void Explode()
     {

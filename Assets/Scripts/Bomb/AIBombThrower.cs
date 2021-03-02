@@ -7,7 +7,6 @@ using Vector3Extensions;
 public class AIBombThrower : MonoBehaviour
 {
     [SerializeField] private float throwSpeed = 20f;
-    [SerializeField] private float radiusAroundTarget = 2f;
     private Transform targetTransform;
     private BombSpawner bombSpawner;
     private void Awake()
@@ -22,14 +21,24 @@ public class AIBombThrower : MonoBehaviour
     {
         bombSpawner.ThrowBomb(position, throwSpeed);
     }
+    public void PlaceBomb(float randomOffset)
+    {
+        float x = Random.Range(-randomOffset, randomOffset);
+        float y = Random.Range(-randomOffset, randomOffset);
+        bombSpawner.PlaceBomb(new Vector3(x, y) + transform.position);
+    }
+    public void PlaceBomb()
+    {
+        PlaceBomb(0);
+    }
     public void ThrowBombToTarget()
     {
         ThrowBombTo(targetTransform.position);
     }
-    public void ThrowBombAroundTarget()
+    public void ThrowBombAroundTarget(float randomOffset)
     {
-        float x = RandomOffset;
-        float y = RandomOffset;
+        float x = Random.Range(-randomOffset, randomOffset);
+        float y = Random.Range(-randomOffset, randomOffset);
         ThrowBombTo(targetTransform.position + new Vector3(x, y));
     }
     public void ThrowBombsInArc(int bombCountPerSide)
@@ -41,5 +50,4 @@ public class AIBombThrower : MonoBehaviour
             ThrowBombTo(((Vector2)targetTransform.position + diffRight * i).Extend(2));
         }
     }
-    private float RandomOffset => Random.Range(-radiusAroundTarget, radiusAroundTarget);
 }

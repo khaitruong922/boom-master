@@ -23,7 +23,7 @@ public class Explosion : PoolObject
             return;
         }
         Bomb bomb = other.GetComponent<Bomb>();
-        if (bomb != null && bomb.CharacterType == CharacterType) bomb.Explode();
+        if (bomb != null && bomb.CharacterType == CharacterType && bomb.Destination == null) bomb.Explode();
     }
 }
 

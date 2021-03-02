@@ -591,9 +591,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 381307493890670126}
     m_Modifications:
     - target: {fileID: 1556043540, guid: 02d4eb28b5f6465419792092f09d2b43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556043540, guid: 02d4eb28b5f6465419792092f09d2b43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1291177378}
+    - target: {fileID: 1556043540, guid: 02d4eb28b5f6465419792092f09d2b43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556043540, guid: 02d4eb28b5f6465419792092f09d2b43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MapDisplay, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6332721016615428434, guid: 02d4eb28b5f6465419792092f09d2b43, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -681,6 +693,22 @@ PrefabInstance:
     - target: {fileID: 6332721016615428437, guid: 02d4eb28b5f6465419792092f09d2b43, type: 3}
       propertyPath: m_Name
       value: MapLayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785692651119900180, guid: 02d4eb28b5f6465419792092f09d2b43, type: 3}
+      propertyPath: onKeyDown.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785692651119900180, guid: 02d4eb28b5f6465419792092f09d2b43, type: 3}
+      propertyPath: onKeyDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1291177378}
+    - target: {fileID: 6785692651119900180, guid: 02d4eb28b5f6465419792092f09d2b43, type: 3}
+      propertyPath: onKeyDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785692651119900180, guid: 02d4eb28b5f6465419792092f09d2b43, type: 3}
+      propertyPath: onKeyDown.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MapDisplay, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02d4eb28b5f6465419792092f09d2b43, type: 3}

@@ -3,25 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Invisible : MonoBehaviour
+public class InvisibleAbility : MonoBehaviour
 {
     [SerializeField] private float duration = 4f;
-    [SerializeField] private GameObject[] visibleObjects;
-    public void Active()
+    [SerializeField] private GameObject[] invisibleObjects;
+    public void Invisible()
     {
         StartCoroutine(GoInvisible());
     }
 
     private IEnumerator GoInvisible()
     {
-        foreach (var v in visibleObjects)
+        foreach (var g in invisibleObjects)
         {
-            v.SetActive(false);
+            g.SetActive(false);
         }
         yield return new WaitForSeconds(duration);
-        foreach (var v in visibleObjects)
+        foreach (var g in invisibleObjects)
         {
-            v.SetActive(true);
+            g.SetActive(true);
         }
     }
 }

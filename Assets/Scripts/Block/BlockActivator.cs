@@ -6,10 +6,10 @@ public class BlockActivator : MonoBehaviour
 {
     private void Start()
     {
-        Block.Instance.gameObject.SetActive(true);
+        Block.Instance?.gameObject?.SetActive(true);
     }
-    private void OnDestroy()
+    public void DeactiveBlock()
     {
-        Block.Instance.gameObject.SetActive(false);
+        Block.Instance?.gameObject?.SetActive(false);
     }
 }

@@ -30,6 +30,14 @@ Desktop
 |:--:| 
 | *Level 2* |
 
+|![Level 3](Screenshots/level3.png)|
+|:--:| 
+| *Level 3* |
+
+|![Level 4](Screenshots/level4.png)|
+|:--:| 
+| *Level 4* |
+
 |![Lobby](Screenshots/lobby.png)|
 |:--:| 
 | *Lobby* |

@@ -16,7 +16,7 @@ Desktop
 
 ## Contributors
 
-- Khai Truong - [khaitruong922](https://github.com/khaitruong922) - Game Developer
+- Khai Truong - [khaitruong922](https://github.com/khaitruong922) - Game Developer & Game Designer
 
 - Thong Thanh Vo - [vothanhthong](https://github.com/vothanhthong) - Game Designer
 

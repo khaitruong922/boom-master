@@ -71,10 +71,6 @@ PrefabInstance:
       propertyPath: objectPool.color.r
       value: 0.50980395
       objectReference: {fileID: 0}
-    - target: {fileID: 5753339606870468425, guid: 74be9c067d7df4a4ea815c18fe0647ab, type: 3}
-      propertyPath: pickupFactory
-      value: 
-      objectReference: {fileID: 11400000, guid: b54b918abab558c4f91f1c1d27ef7e30, type: 2}
     - target: {fileID: 7584041374967240876, guid: 74be9c067d7df4a4ea815c18fe0647ab, type: 3}
       propertyPath: damage
       value: 40

@@ -57,8 +57,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 5
-  initialCooldown: 20
+  cooldown: 4
+  initialCooldown: 15
   onInterval:
     m_PersistentCalls:
       m_Calls:

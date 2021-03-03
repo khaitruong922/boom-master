@@ -14787,6 +14787,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlobalLight
       objectReference: {fileID: 0}
+    - target: {fileID: 6562524716271901139, guid: cf8a7130a2a6235469cc882ee9316e9c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562524716271901139, guid: cf8a7130a2a6235469cc882ee9316e9c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6650944
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562524716271901139, guid: cf8a7130a2a6235469cc882ee9316e9c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8173242
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562524716271901139, guid: cf8a7130a2a6235469cc882ee9316e9c, type: 3}
+      propertyPath: m_Intensity
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6562524716271901148, guid: cf8a7130a2a6235469cc882ee9316e9c, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -15233,6 +15249,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 757047607, guid: bbdf8a3e68df21d4bb232b183fdf45ac, type: 3}
+      propertyPath: requiredScore
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 412033551970806232, guid: bbdf8a3e68df21d4bb232b183fdf45ac, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -15281,6 +15301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7708459772865987933, guid: bbdf8a3e68df21d4bb232b183fdf45ac, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 17498a0e10259fa4f8488554e3132df3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbdf8a3e68df21d4bb232b183fdf45ac, type: 3}
 --- !u!114 &1613389447

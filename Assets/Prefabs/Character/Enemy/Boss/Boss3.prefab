@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5221419814837718193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8841886608535522265}
+  - component: {fileID: 1985326852265857776}
+  m_Layer: 8
+  m_Name: Heal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8841886608535522265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5221419814837718193}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6659779769868865000}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1985326852265857776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5221419814837718193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 20
+  initialCooldown: 20
+  onInterval:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2943373752447561024}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: Heal
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1000
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7378117053660087931
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +72,7 @@ GameObject:
   - component: {fileID: 1476112708434895531}
   - component: {fileID: 7535488327217753925}
   - component: {fileID: 6896007784000081174}
+  - component: {fileID: 1150963780151894850}
   m_Layer: 8
   m_Name: Bomb8D
   m_TagString: Untagged
@@ -52,8 +113,8 @@ MonoBehaviour:
     type: 500
     color: {r: 0, g: 0, b: 0, a: 1}
   damage: 50
-  length: 10
-  lifetime: 2
+  length: 20
+  lifetime: 3
   bombLimit: 999
   onBombPlaced:
     m_PersistentCalls:
@@ -84,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 4
-  initialCooldown: 10
+  initialCooldown: 8
   onInterval:
     m_PersistentCalls:
       m_Calls:
@@ -92,6 +153,35 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: BombSpawner, Assembly-CSharp
         m_MethodName: PlaceBomb
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1150963780151894850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378117053660087931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cc73468db157346814e11f9dad955e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 4
+  initialCooldown: 10
+  onInterval:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7535488327217753925}
+        m_TargetAssemblyTypeName: AIBombThrower, Assembly-CSharp
+        m_MethodName: ThrowBombAroundTarget
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -344,7 +434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4906122013401940572, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: maxHP
-      value: 5000
+      value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 6653861744286338943, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
       propertyPath: m_Color.b
@@ -369,6 +459,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3504564967481910004, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
   m_PrefabInstance: {fileID: 7840482381522038556}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2943373752447561024 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4906122013401940572, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}
+  m_PrefabInstance: {fileID: 7840482381522038556}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f04f84ecc668b14da6cfe9444f38bf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5782617668646261700 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4391292274422234328, guid: aa0feefd9fa432d48982871a4e09c6fc, type: 3}

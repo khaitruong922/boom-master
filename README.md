@@ -1,10 +1,12 @@
 # Boom Master
 
-This project is created from [template](https://github.com/khaitruong922/unity-2d-desktop-template/).
+Blow up all the enemies in the way and save the world!
 
 ## Description
 
-Blow up all the enemies in the way and save the world!
+Bomb Master is an 2D top-down action game where the player will place bombs to clear all enemies. The game is inspired from the first "bomb" game, Super Bomberman.
+
+There are 4 levels in this game, ramping up in difficulty, where the last one is boss battle.
 
 ## Platform
 
@@ -45,6 +47,14 @@ Desktop
 |![Map Selection](Screenshots/mapselect.png)|
 |:--:| 
 | *Map Selection* |
+
+## How to play?
+
+Hold WASD keys to move your character.
+
+Press Space key to place bomb.
+
+Clear all the enemies in the map to win.
 
 ## Where to play?
 

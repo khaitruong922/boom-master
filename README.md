@@ -71,8 +71,6 @@ Play the game [here](https://khaitruong922.itch.io/boom-master)
 - [Dungeon Tileset](https://0x72.itch.io/16x16-dungeon-tileset)
 
 - [PixelHole's Overworld Tileset](https://pixelhole.itch.io/pixelholes-overworld-tileset)
-  
-- [Cartoon Explosion Wallpapers](https://wallpaperaccess.com/cartoon-explosion)
 
 - [Bomb Sprite](https://steemit.com/pixelart/@loomy/pixel-art-items-i-am-using-in-my-current-project)
 
@@ -88,4 +86,4 @@ Play the game [here](https://khaitruong922.itch.io/boom-master)
 
 - [Free Sound Effects - Mixkit](https://mixkit.co/free-sound-effects/)
 
-- [Desert Travel Inspired Instrumental Music](https://youtu.be/Sc40MyNNvhY)
+- [Wingless Seraph - Professional Game Music for FREE](https://wingless-seraph.net/en/index.html)

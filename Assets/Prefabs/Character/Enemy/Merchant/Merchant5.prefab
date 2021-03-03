@@ -129,7 +129,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: f7c77e621e8104345a38360454c73df1, type: 2}
     - target: {fileID: 2585715753222693568, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: maxHP
-      value: 800
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 3111337584935162750, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: shootRange
@@ -149,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: damage
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: shootForce

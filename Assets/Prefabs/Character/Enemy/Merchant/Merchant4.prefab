@@ -71,7 +71,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 3df65118a8d70734c87cee074ba322fd, type: 2}
     - target: {fileID: 2585715753222693568, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: maxHP
-      value: 600
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4297279833862041571, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: m_Color.b
@@ -87,7 +87,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: damage
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6100028639107031996, guid: 149dbe7c875f35441b58badc990e4a37, type: 3}
       propertyPath: shootForce

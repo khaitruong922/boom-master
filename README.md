@@ -6,7 +6,7 @@ Blow up all the enemies in the way and save the world!
 
 Bomb Master is a single-player 2D top-down action game where the player will place bombs to clear all enemies. The game is inspired from the first "bomb" game, Super Bomberman.
 
-There are 4 levels in this game, ramping up in difficulty, where the last one is boss battle.
+There are 4 levels in this game, ramping up in difficulty.
 
 ## Platform
 

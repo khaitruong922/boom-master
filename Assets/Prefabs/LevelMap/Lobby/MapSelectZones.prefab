@@ -70,7 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf68487137fc22458e969d29b7fb79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectKey: 102
   mapSceneName: Level3
 --- !u!1 &299653398533911789
 GameObject:
@@ -142,7 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf68487137fc22458e969d29b7fb79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectKey: 102
   mapSceneName: Level4
 --- !u!1 &299653398582729807
 GameObject:
@@ -214,7 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf68487137fc22458e969d29b7fb79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectKey: 102
   mapSceneName: Level1
 --- !u!1 &299653399224827367
 GameObject:
@@ -320,5 +317,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf68487137fc22458e969d29b7fb79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectKey: 102
   mapSceneName: Level2

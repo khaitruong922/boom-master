@@ -192,18 +192,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 299653398421950321, guid: 4bd91192f47d5cc4aa06a7b1aee592ef, type: 3}
-      propertyPath: selectKey
-      value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: 299653398533911791, guid: 4bd91192f47d5cc4aa06a7b1aee592ef, type: 3}
-      propertyPath: selectKey
-      value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: 299653398582729802, guid: 4bd91192f47d5cc4aa06a7b1aee592ef, type: 3}
-      propertyPath: selectKey
-      value: 101
-      objectReference: {fileID: 0}
     - target: {fileID: 299653399224827360, guid: 4bd91192f47d5cc4aa06a7b1aee592ef, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -252,10 +240,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapSelectZones
       objectReference: {fileID: 0}
-    - target: {fileID: 299653399373094608, guid: 4bd91192f47d5cc4aa06a7b1aee592ef, type: 3}
-      propertyPath: selectKey
-      value: 101
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bd91192f47d5cc4aa06a7b1aee592ef, type: 3}
 --- !u!1 &758191031
@@ -299,7 +283,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: d93e18b5542895440a654c0fe13100cd, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 20582e0d56b91704485cdbec6caf9bb7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a47defde690619b4990e7fc358f3dcae, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -744,7 +728,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 381307493890670122, guid: b2c77b02f0c5fda4b97863371b412328, type: 3}
       propertyPath: m_Name
-      value: BaseSceneCanvas
+      value: LobbyCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 381307493890670126, guid: b2c77b02f0c5fda4b97863371b412328, type: 3}
       propertyPath: m_Pivot.x
